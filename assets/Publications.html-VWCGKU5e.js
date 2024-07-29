@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-47f9410e","path":"/Publications.html","title":"Publications","lang":"en-US","frontmatter":{"article":false,"sidebar":false},"headers":[{"level":2,"title":"2024","slug":"_2024","link":"#_2024","children":[]},{"level":2,"title":"2023","slug":"_2023","link":"#_2023","children":[]}],"filePathRelative":"Publications.md"}');export{e as data};
