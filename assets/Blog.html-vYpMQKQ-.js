@@ -1,0 +1,1 @@
+const e=JSON.parse(`{"key":"v-4d16e0fa","path":"/Blog/Blog.html","title":"","lang":"en-US","frontmatter":{"home":true,"layout":"BlogHome","heroText":"Welcome to Jinahao's Blog","tagline":false,"bgImage":"blog.jpg","heroFullScreen":true},"headers":[],"filePathRelative":"Blog/Blog.md"}`);export{e as data};
