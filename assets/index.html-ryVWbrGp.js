@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0cd14e4a","path":"/category/photography/","title":"Photography Category","lang":"en-US","frontmatter":{"title":"Photography Category","dir":{"index":false},"index":false,"feed":false,"sitemap":false,"blog":{"type":"category","name":"Photography","key":"category"},"layout":"BlogCategory"},"headers":[],"filePathRelative":null}');export{e as data};
