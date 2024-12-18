@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-54f8af5f","path":"/Blog/Photograph/","title":"Photograph","lang":"en-US","frontmatter":{"title":"Photograph","article":false,"feed":false,"sitemap":false},"headers":[],"filePathRelative":null}');export{e as data};

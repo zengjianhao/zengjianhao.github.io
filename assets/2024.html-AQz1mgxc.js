@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-407b4bfc","path":"/Memories/2024.html","title":"","lang":"en-US","frontmatter":{"article":false,"sidebar":false,"toc":false},"headers":[],"filePathRelative":"Memories/2024.md"}');export{e as data};
