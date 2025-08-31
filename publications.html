@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <title>Jianhao Zeng's HomePage</title>
+        <link rel="shortcut icon" href="./public/avatar.jpg">
+    </head>
+    <body class="font-sans relative dark:bg-neutral-900">
+
+        <!-- SVG -->
+        <svg style="display:none;">
+            <symbol id="icon-greater" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6s6 4.419 6 6s-6 6-6 6" color="currentColor"/>
+            </symbol>
+        </svg>
+        <svg style="display:none;">
+            <symbol id="icon-sun" viewBox="0 0 16 16">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 1v2m0 10v2m5-7h2M1 8h2m8.5 3.5L13 13M4.5 4.5L3 3m8.5 1.5L13 3m-8.5 8.5L3 13m8-5a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" color="currentColor"/>
+            </symbol>
+        </svg>
+        <svg style="display:none;">
+            <symbol id="icon-moon" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21C15.53 21 18.59 18.96 20.06 16C20.06 16 14 17.5 11 13C8 8.5 12 3 12 3Z">
+            </symbol>
+        </svg>
+       <svg style="display:none;">
+            <symbol id="icon-photo" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><path d="M15 8h.01M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6z"/><path d="m3 16l5-5c.928-.893 2.072-.893 3 0l5 5"/><path d="m14 14l1-1c.928-.893 2.072-.893 3 0l3 3"/></g>
+            </symbol>
+        </svg>
+       <svg style="display:none;">
+            <symbol id="icon-paper" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m7.918 17.807l7.89-7.553a2.253 2.253 0 0 0 0-3.284a2.503 2.503 0 0 0-3.43 0l-7.834 7.498a4.28 4.28 0 0 0 0 6.24c1.8 1.723 4.718 1.723 6.518 0l7.949-7.608c2.652-2.54 2.652-6.656 0-9.196c-2.653-2.539-6.954-2.539-9.607 0L3 10.034"/>
+            </symbol>
+        </svg>
+
+
+        <header class="flex flex-row items-start justify-between mx-auto p-8">
+            <a href="./index.html" class="text-lg font-normal text-black dark:text-white">Jianhao</a>
+            <div class="flex flex-row items-start justify-start gap-x-6">
+                <a href="./Publications.html" class="hidden sm:block text-base font-normal text-black hover:text-orange-300 dark:text-white">Publications</a>
+                <a href="./Publications.html" class="block sm:hidden text-black hover:text-orange-300 dark:text-white"><svg class="w-6 h-6"><use href="#icon-paper"></svg></a>
+                <a href="./Photography.html" class="hidden sm:block text-base font-normal text-black hover:text-orange-300 dark:text-white">Photography</a>
+                <a href="./Photography.html" class="block sm:hidden text-black hover:text-orange-300 dark:text-white"><svg class="w-6 h-6"><use href="#icon-photo"></svg></a>
+                <button id="theme-toggle" class="text-black hover:text-orange-300 dark:text-white">
+                    <svg class="w-6 h-6 block dark:hidden"><use href="#icon-sun"></svg>
+                    <svg class="w-6 h-6 hidden dark:block"><use href="#icon-moon"></svg>
+                </button>
+            </div>
+        </header>
+
+
+        <main class="px-8 mx-auto max-w-3xl">
+            <h1 class="text-4xl font-bold text-black my-10 dark:text-white">Publications</h1>
+
+            <div class="w-full flex flex-row items-start justify-start gap-2 my-4">
+                <p class="w-6 flex-none text-lg font-normal text-black dark:text-white font-mono">6.</p>
+                <div class="flex-1 flex flex-col items-start justify-start">
+                    <a href="" target="_blank" class="text-lg font-medium text-black hover:text-orange-300 dark:text-white">MEF-GD: Multimodal Enhancement and Fusion Network for Garment Designer<span class="align-super text-xs">↗</span></a>
+                    <p class="text-base font-normal text-gray-700 dark:text-gray-500">
+                        Dan Song,
+                        Juan Zhou
+                        <span class="underline text-orange-300">Jianhao Zeng</span>,
+                        Hongshuo Tian,
+                        Bolun Zheng,
+                        Rongbao Kang,
+                        Anan Liu<span class="align-super text-xs">#</span>
+                    </p>
+                    <p class="text-base font-normal text-gray-500 italic">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2025</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row items-start justify-start gap-2 my-4">
+                <p class="w-6 flex-none text-lg font-normal text-black dark:text-white font-mono">5.</p>
+                <div class="flex-1 flex flex-col items-start justify-start">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_Robust-MVTON_Learning_Cross-Pose_Feature_Alignment_and_Fusion_for_Robust_Multi-View_CVPR_2025_paper.pdf" target="_blank" class="text-lg font-medium text-black hover:text-orange-300 dark:text-white">Robust-MVTON: Learning Cross-Pose Feature Alignment and Fusion for Robust Multi-View Virtual Try-On<span class="align-super text-xs">↗</span></a>
+                    <p class="text-base font-normal text-gray-700 dark:text-gray-500">
+                        Nannan Zhang<span class="align-super text-xs">*</span>,
+                        Yijiang Li<span class="align-super text-xs">*</span>,
+                        Dong Du<span class="align-super text-xs">#</span>,
+                        Zheng Chong,
+                        Zhengwentai Sun,
+                        <span class="underline text-orange-300">Jianhao Zeng</span>,
+                        Yusheng Dai,
+                        Zhenyu Xie,
+                        Hairui Zhu,
+                        Xiaoguang Han<span class="align-super text-xs">#</span>
+                    </p>
+                    <p class="text-base font-normal text-gray-500 italic">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row items-start justify-start gap-2 my-4">
+                <p class="w-6 flex-none text-lg font-normal text-black dark:text-white font-mono">4.</p>
+                <div class="flex-1 flex flex-col items-start justify-start">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_BooW-VTON_Boosting_In-the-Wild_Virtual_Try-On_via_Mask-Free_Pseudo_Data_Training_CVPR_2025_paper.pdf" target="_blank" class="text-lg font-medium text-black hover:text-orange-300 dark:text-white">BooW-VTON: Boosting In-the-Wild Virtual Try-On via Mask-Free Pseudo Data Training<span class="align-super text-xs">↗</span></a>
+                    <p class="text-base font-normal text-gray-700 dark:text-gray-500">
+                        Xuanpu Zhang,
+                        Dan Song<span class="align-super text-xs">#</span>,
+                        Pengxin Zhan,
+                        Tianyu Chang,
+                        <span class="underline text-orange-300">Jianhao Zeng</span>,
+                        Qingguo Chen,
+                        Weihua Luo,
+                        Anan Liu<span class="align-super text-xs">#</span>,
+                    </p>
+                    <p class="text-base font-normal text-gray-500 italic">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row items-start justify-start gap-2 my-4">
+                <p class="w-6 flex-none text-lg font-normal text-black dark:text-white font-mono">3.</p>
+                <div class="flex-1 flex flex-col items-start justify-start">
+                    <a href="https://ieeexplore.ieee.org/document/1081199" target="_blank" class="text-lg font-medium text-black hover:text-orange-300 dark:text-white">Better Fit: Accommodate Variations in Clothing Types for Virtual Try-on<span class="align-super text-xs">↗</span></a>
+                    <p class="text-base font-normal text-gray-700 dark:text-gray-500">
+                        Dan Song,
+                        Xuanpu Zhang,
+                        <span class="underline text-orange-300">Jianhao Zeng</span>,
+                        Pengxin Zhan,
+                        Qingguo Chen,
+                        Weihua Luo,
+                        Anan Liu<span class="align-super text-xs">#</span>,
+                    </p>
+                    <p class="text-base font-normal text-gray-500 italic">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2024</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row items-start justify-start gap-2 my-4">
+                <p class="w-6 flex-none text-lg font-normal text-black dark:text-white font-mono">2.</p>
+                <div class="flex-1 flex flex-col items-start justify-start">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Zeng_CAT-DM_Controllable_Accelerated_Virtual_Try-on_with_Diffusion_Model_CVPR_2024_paper.pdf" target="_blank" class="text-lg font-medium text-black hover:text-orange-300 dark:text-white">CAT-DM: Controllable Accelerated Virtual Try-on with Diffusion Model<span class="align-super text-xs">↗</span></a>
+                    <p class="text-base font-normal text-gray-700 dark:text-gray-500">
+                        <span class="underline text-orange-300">Jianhao Zeng</span>,
+                        Dan Song#,
+                        Weizhi Nie,
+                        Hongshuo Tian,
+                        Tongtong Wang,
+                        Anan Liu<span class="align-super text-xs">#</span>,
+                    </p>
+                    <p class="text-base font-normal text-gray-500 italic">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024</p>
+                </div>
+            </div>
+            <div class="w-full flex flex-row items-start justify-start gap-2 my-4">
+                <p class="w-6 flex-none text-lg font-normal text-black dark:text-white font-mono">1.</p>
+                <div class="flex-1 flex flex-col items-start justify-start">
+                    <a href="https://ieeexplore.ieee.org/document/10336823" target="_blank" class="text-lg font-medium text-black hover:text-orange-300 dark:text-white">Fashion Customization: Image Generation Based on Editing Clue<span class="align-super text-xs">↗</span></a>
+                    <p class="text-base font-normal text-gray-700 dark:text-gray-500">
+                        Dan Song,
+                        <span class="underline text-orange-300">Jianhao Zeng</span>,
+                        Min Liu,
+                        Xuanya Li,
+                        Anan Liu<span class="align-super text-xs">#</span>,
+                    </p>
+                    <p class="text-base font-normal text-gray-500 italic">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT), 2023</p>
+                </div>
+            </div>
+
+            <footer class="mt-16 mb-8 text-gray-500"></span></footer>
+        </main>
+        <script>
+            if (
+                localStorage.theme === 'dark' ||
+                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+
+            // 切换按钮
+            document.getElementById('theme-toggle').addEventListener('click', () => {
+                if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark')
+                localStorage.theme = 'light'
+                } else {
+                document.documentElement.classList.add('dark')
+                localStorage.theme = 'dark'
+                }
+            })
+        </script>
+    </body>
+</html>

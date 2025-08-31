@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <title>Jianhao Zeng's HomePage</title>
+        <link rel="shortcut icon" href="./public/avatar.jpg">
+    </head>
+
+    <body class="font-sans relative dark:bg-neutral-900">
+
+        <!-- SVG -->
+        <svg style="display:none;">
+            <symbol id="icon-greater" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6s6 4.419 6 6s-6 6-6 6" color="currentColor"/>
+            </symbol>
+        </svg>
+        <svg style="display:none;">
+            <symbol id="icon-sun" viewBox="0 0 16 16">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 1v2m0 10v2m5-7h2M1 8h2m8.5 3.5L13 13M4.5 4.5L3 3m8.5 1.5L13 3m-8.5 8.5L3 13m8-5a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" color="currentColor"/>
+            </symbol>
+        </svg>
+        <svg style="display:none;">
+            <symbol id="icon-moon" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21C15.53 21 18.59 18.96 20.06 16C20.06 16 14 17.5 11 13C8 8.5 12 3 12 3Z">
+            </symbol>
+        </svg>
+       <svg style="display:none;">
+            <symbol id="icon-photo" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><path d="M15 8h.01M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6z"/><path d="m3 16l5-5c.928-.893 2.072-.893 3 0l5 5"/><path d="m14 14l1-1c.928-.893 2.072-.893 3 0l3 3"/></g>
+            </symbol>
+        </svg>
+       <svg style="display:none;">
+            <symbol id="icon-paper" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m7.918 17.807l7.89-7.553a2.253 2.253 0 0 0 0-3.284a2.503 2.503 0 0 0-3.43 0l-7.834 7.498a4.28 4.28 0 0 0 0 6.24c1.8 1.723 4.718 1.723 6.518 0l7.949-7.608c2.652-2.54 2.652-6.656 0-9.196c-2.653-2.539-6.954-2.539-9.607 0L3 10.034"/>
+            </symbol>
+        </svg>
+
+
+        <header class="flex flex-row items-start justify-between mx-auto p-8">
+            <a href="./index.html" class="text-lg font-normal text-black dark:text-white">Jianhao</a>
+            <div class="flex flex-row items-start justify-start gap-x-6">
+                <a href="./Publications.html" class="hidden sm:block text-base font-normal text-black hover:text-orange-300 dark:text-white">Publications</a>
+                <a href="./Publications.html" class="block sm:hidden text-black hover:text-orange-300 dark:text-white"><svg class="w-6 h-6"><use href="#icon-paper"></svg></a>
+                <a href="./Photography.html" class="hidden sm:block text-base font-normal text-black hover:text-orange-300 dark:text-white">Photography</a>
+                <a href="./Photography.html" class="block sm:hidden text-black hover:text-orange-300 dark:text-white"><svg class="w-6 h-6"><use href="#icon-photo"></svg></a>
+                <button id="theme-toggle" class="text-black hover:text-orange-300 dark:text-white">
+                    <svg class="w-6 h-6 block dark:hidden"><use href="#icon-sun"></svg>
+                    <svg class="w-6 h-6 hidden dark:block"><use href="#icon-moon"></svg>
+                </button>
+            </div>
+        </header>
+
+
+        <main class="px-8 mx-auto max-w-3xl">
+            <h1 class="text-4xl font-bold text-black my-10 dark:text-white">Hello!</h1>
+
+            <p class="text-base font-normal text-gray-700 my-2 dark:text-gray-400">
+                My name is Jianhao Zeng (曾建豪). I work as an Algorithm Engineer at <a href="https://www.amap.com/" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Amap<span class="align-super text-xs">↗</span></a>, <a href="https://ali-home.alibaba.com/en-US" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Alibaba Group<span class="align-super text-xs">↗</span></a>.
+                <br/>
+                <br/>
+                I graduated from <a href="https://www.tju.edu.cn/" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Tianjin University<span class="align-super text-xs">↗</span></a> with a B.S. degree in Mechanical Design & Manufacturing and Automation and an M.S. degree in Electronic and Information Engineering, where I was fortunate to be guided by Prof. <a href="http://seea.tju.edu.cn/info/1014/1460.htm" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Dan Song<span class="align-super text-xs">↗</span></a>.
+                After that, I joined the School of Engineering at <a href="https://westlake.edu.cn/" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Westlake University<span class="align-super text-xs">↗</span></a> as a Research Assistant, supervised by <a href="http://maple-lab.net/gqi/" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Guojun Qi<span class="align-super text-xs">↗</span></a> .
+                <br/>
+                <br/>
+                My research area focuses on Artificial Intelligence Generated Content (AIGC), especially generative models and their application. You can find my full list of publications on <a href="https://scholar.google.com/citations?user=Sh4tLFsAAAAJ&hl=en" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Google Scholar<span class="align-super text-xs">↗</span></a>.
+                Outside of work, my interests mainly revolve around photography, web development and music. In the future, I hope to combine these passions with artificial intelligence.
+                <br/>
+                <br/>
+                If you'd like to connect or make friends, please feel free to reach out. Any discussion is welcome via <a href="mailto:jh_zeng@tju.edu.cn" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">E-mail<span class="align-super text-xs">↗</span></a>.
+            </p>
+
+            <h2 class="text-xl font-medium text-black my-6 dark:text-white">Experience</h2>
+
+            <div class="hidden sm:flex flex-row items-start justify-start w-full my-2">
+                <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter py-2 mr-4 dark:text-gray-400">2025.06 - Present</p>
+                <div class="summary flex-1 flex flex-row items-start justify-start p-2 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800">
+                    <svg class="flex-none arrow w-6 h-6 fill-current transition-transform duration-500 text-black dark:text-white"><use href="#icon-greater" /></svg>
+                    <div class="w-full flex flex-col items-start justify-start">
+                        <div class="w-full flex flex-row items-center justify-start">
+                            <p class="text-base font-normal text-gray-700 dark:text-gray-400">Amap, Alibaba Group</p>
+                            <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                            <p class="text-base font-normal text-gray-700 dark:text-gray-400">Algorithm Engineer</p>
+                        </div>
+                        <p class="detail mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out text-gray-500">Mentor: Dr. <a href="https://allylei.github.io/" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Lei Sun<span class="align-super text-xs">↗</span></a>, Dr. <a href="https://scholar.google.com/citations?hl=zh-CN&user=Ilx8WNkAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Yancheng Bai<span class="align-super text-xs">↗</span></a> and Mr. <a href="https://scholar.google.com/citations?hl=zh-CN&user=jn21pUsAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Xiangxiang Chu<span class="align-super text-xs">↗</span></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden sm:flex flex-row items-start justify-start w-full my-2">
+                <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter py-2 mr-4 dark:text-gray-400">2024.06 - 2025.01</p>
+                <div class="summary flex-1 flex flex-row items-start justify-start p-2 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800">
+                    <svg class="flex-none arrow w-6 h-6 fill-current transition-transform duration-500 text-black dark:text-white"><use href="#icon-greater" /></svg>
+                    <div class="w-full flex flex-col items-start justify-start">
+                        <div class="w-full flex flex-row items-center justify-start">
+                            <p class="ext-base font-normal text-gray-700 dark:text-gray-400">Westlake University</p>
+                            <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                            <p class="ext-base font-normal text-gray-700 dark:text-gray-400">Research Assistant</p>
+                        </div>
+                        <p class="detail mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out text-gray-500">Advisor: Dr. <a href="https://scholar.google.com/citations?user=j6T8Tk8AAAAJ&hl=zh-CN" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Liyuan Ma<span class="align-super text-xs">↗</span></a>, Dr. <a href="https://volgachen.github.io/" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Zhiyang Chen<span class="align-super text-xs">↗</span></a> and Prof. <a href="http://maple-lab.net/gqi/" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Guojun Qi<span class="align-super text-xs">↗</span></a> (Distinguished Young Scholars)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden sm:flex flex-row items-start justify-start w-full my-2">
+                <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter py-2 mr-4 dark:text-gray-400">2021.09 - 2024.06</p>
+                <div class="summary flex-1 flex flex-row items-start justify-start p-2 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800">
+                    <svg class="flex-none arrow w-6 h-6 fill-current transition-transform duration-500 text-black dark:text-white"><use href="#icon-greater" /></svg>
+                    <div class="w-full flex flex-col items-start justify-start">
+                        <div class="w-full flex flex-row items-center justify-start">
+                            <p class="ext-base font-normal text-gray-700 dark:text-gray-400">Tianjin University</p>
+                            <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                            <p class="ext-base font-normal text-gray-700 dark:text-gray-400">Master Student</p>
+                        </div>
+                        <div class="detail mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out text-gray-500">
+                            <p>M.S. in Electronic and Information Engineering</p>
+                            <p>Advisor: Prof. <a href="http://seea.tju.edu.cn/info/1014/1460.htm" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Dan Song<span class="align-super text-xs">↗</span></a> and Prof. <a href="https://seea.tju.edu.cn/info/1014/1508.htm" target="_blank" class="text-black hover:text-orange-300 underline dark:text-white">Anan Liu<span class="align-super text-xs">↗</span></a> (Distinguished Young Scholars)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden sm:flex flex-row items-start justify-start w-full my-2">
+                <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter py-2 mr-4 dark:text-gray-400">2017.09 - 2021.06</p>
+                <div class="summary flex-1 flex flex-row items-start justify-start p-2 cursor-pointer rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-800">
+                    <svg class="flex-none arrow w-6 h-6 fill-current transition-transform duration-500 text-black dark:text-white"><use href="#icon-greater" /></svg>
+                    <div class="w-full flex flex-col items-start justify-start">
+                        <div class="w-full flex flex-row items-center justify-start">
+                            <p class="ext-base font-normal text-gray-700 dark:text-gray-400">Tianjin University</p>
+                            <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                            <p class="ext-base font-normal text-gray-700 dark:text-gray-400">Undergraduate Student</p>
+                        </div>
+                        <div class="detail mt-2 max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out text-gray-500">
+                            <p>B.S. in Mechanical Design & Manufacturing and Their Automation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter mt-2 sm:hidden dark:text-gray-400">2025.06 - Present</p>
+            <div class="flex flex-row items-center justify-start w-full mb-2 sm:hidden">
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Amap, Alibaba Group</p>
+                <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Algorithm Engineer</p>
+            </div>
+            <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter mt-2 sm:hidden dark:text-gray-400">2024.06 - 2025.01</p>
+            <div class="flex flex-row items-center justify-start w-full mb-2 sm:hidden">
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Westlake University</p>
+                <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Research Assistant</p>
+            </div>
+            <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter mt-2 sm:hidden dark:text-gray-400">2021.09 - 2024.06</p>
+            <div class="flex flex-row items-center justify-start w-full mb-2 sm:hidden">
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Tianjin University</p>
+                <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Master Student</p>
+            </div>
+            <p class="flex-none text-base font-normal text-gray-700 font-mono tracking-tighter mt-2 sm:hidden dark:text-gray-400">2017.09 - 2021.06</p>
+            <div class="flex flex-row items-center justify-start w-full mb-2 sm:hidden">
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Tianjin University</p>
+                <div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
+                <p class="text-base font-normal text-gray-700 dark:text-gray-400">Undergraduate Student</p>
+            </div>
+
+            <h2 class="text-xl font-medium text-black my-6 dark:text-white">Elsewhere</h2>
+
+            <div class="flex flex-row items-center justify-start flex-wrap gap-4 my-2">
+                <div class="flex flex-row items-center justify-start gap-2 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256" class="inline"><path fill="currentColor" d="m210.78 39.25l-130.25-23A16 16 0 0 0 62 29.23l-29.75 169a16 16 0 0 0 13 18.53l130.25 23a16 16 0 0 0 18.54-13l29.75-169a16 16 0 0 0-13.01-18.51ZM178.26 224L48 201L77.75 32L208 55ZM89.34 58.42a8 8 0 0 1 9.27-6.48l83 14.65a8 8 0 0 1-1.39 15.88a8.36 8.36 0 0 1-1.4-.12l-83-14.66a8 8 0 0 1-6.48-9.27ZM83.8 89.94a8 8 0 0 1 9.27-6.49l83 14.66a8 8 0 0 1-1.4 15.89a7.55 7.55 0 0 1-1.41-.13l-83-14.65a8 8 0 0 1-6.46-9.28Zm-5.55 31.51a8 8 0 0 1 9.27-6.45l41.48 7.29a8 8 0 0 1-1.38 15.88a8.27 8.27 0 0 1-1.4-.12l-41.5-7.33a8 8 0 0 1-6.47-9.27Z"/></svg>
+                    <a href="https://github.com/zengjianhao/JianhaoZengCV/blob/main/JianhaoZeng_CV.pdf" target="_blank" class="hover:text-orange-300">CV<span class="align-super text-xs">↗</span></a>
+                </div>
+                <div class="flex flex-row items-center justify-start gap-2 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 432 416"><path fill="currentColor" d="M213.5 0q88.5 0 151 62.5T427 213q0 70-41 125.5T281 416q-14 2-14-11v-58q0-27-15-40q44-5 70.5-27t26.5-77q0-34-22-58q11-26-2-57q-18-5-58 22q-26-7-54-7t-53 7q-18-12-32.5-17.5T107 88h-6q-12 31-2 57q-22 24-22 58q0 55 27 77t70 27q-11 10-13 29q-42 18-62-18q-12-20-33-22q-2 0-4.5.5t-5 3.5t8.5 9q14 7 23 31q1 2 2 4.5t6.5 9.5t13 10.5T130 371t30-2v36q0 13-14 11q-64-22-105-77.5T0 213q0-88 62.5-150.5T213.5 0z"/></svg>
+                    <a href="https://github.com/zengjianhao" target="_blank" class="hover:text-orange-300">GitHub<span class="align-super text-xs">↗</span></a>
+                </div>
+                <div class="flex flex-row items-center justify-start gap-2 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 384 512"><path fill="currentColor" d="M343.759 106.662V79.43L363.524 64h-213.89L20.476 176.274h85.656a82.339 82.339 0 0 0-.219 6.225c0 20.845 7.22 38.087 21.672 51.861c14.453 13.797 32.252 20.648 53.327 20.648c4.923 0 9.75-.368 14.438-1.024c-2.907 6.5-4.374 12.523-4.374 18.142c0 9.875 4.499 20.43 13.467 31.642c-39.234 2.67-68.061 9.732-86.437 21.163c-10.531 6.5-19 14.704-25.39 24.531c-6.391 9.9-9.578 20.515-9.578 31.962c0 9.648 2.062 18.336 6.219 26.062c4.156 7.726 9.578 14.07 16.312 18.984c6.718 4.968 14.469 9.101 23.219 12.469c8.734 3.344 17.406 5.718 26.061 7.062A167.052 167.052 0 0 0 180.555 448c13.469 0 26.953-1.734 40.547-5.187c13.562-3.485 26.28-8.642 38.171-15.493c11.86-6.805 21.515-16.086 28.922-27.718c7.39-11.68 11.094-24.805 11.094-39.336c0-11.016-2.25-21.039-6.75-30.14c-4.468-9.073-9.938-16.542-16.452-22.345c-6.501-5.813-13-11.155-19.516-15.968c-6.5-4.845-12-9.75-16.468-14.813c-4.485-5.046-6.735-10.054-6.735-14.984c0-4.921 1.734-9.672 5.216-14.265c3.455-4.61 7.674-9.048 12.61-13.306c4.937-4.25 9.875-8.968 14.796-14.133c4.922-5.147 9.141-11.827 12.61-20.008c3.485-8.18 5.203-17.445 5.203-27.757c0-13.453-2.547-24.46-7.547-33.314c-.594-1.022-1.218-1.803-1.875-3.022l56.907-46.672v17.119c-7.393.93-6.624 5.345-6.624 10.635V245.96c0 5.958 4.875 10.834 10.834 10.834h3.989c5.958 0 10.833-4.875 10.833-10.834V117.293c0-5.277.778-9.688-6.561-10.63zm-107.36 222.48c1.14.75 3.704 2.78 7.718 6.038c4.05 3.243 6.797 5.695 8.266 7.414a443.553 443.553 0 0 1 6.376 7.547c2.813 3.375 4.718 6.304 5.718 8.734c1 2.477 2.016 5.461 3.047 8.946a38.27 38.27 0 0 1 1.485 10.562c0 17.048-6.564 29.68-19.656 37.859c-13.125 8.18-28.767 12.274-46.938 12.274c-9.187 0-18.203-1.093-27.063-3.196c-8.843-2.116-17.311-5.336-25.39-9.601c-8.078-4.258-14.577-10.204-19.5-17.797c-4.938-7.64-7.407-16.415-7.407-26.25c0-10.32 2.797-19.29 8.422-26.906c5.594-7.625 12.938-13.391 22.032-17.315c9.063-3.946 18.25-6.742 27.562-8.398a157.865 157.865 0 0 1 28.438-2.555c4.47 0 7.936.25 10.405.696c.455.219 3.032 2.07 7.735 5.563c4.704 3.462 7.625 5.595 8.75 6.384zm-3.359-100.579c-7.406 8.86-17.734 13.288-30.953 13.288c-11.86 0-22.298-4.764-31.266-14.312c-9-9.523-15.422-20.328-19.344-32.43c-3.937-12.109-5.906-23.984-5.906-35.648c0-13.694 3.596-25.352 10.781-34.976c7.187-9.65 17.5-14.485 30.938-14.485c11.875 0 22.374 5.038 31.437 15.157c9.094 10.085 15.61 21.413 19.517 33.968c3.922 12.54 5.873 24.53 5.873 35.984c0 13.446-3.702 24.61-11.076 33.454z"/></svg>
+                    <a href="https://scholar.google.com/citations?user=Sh4tLFsAAAAJ&hl=en" target="_blank" class="hover:text-orange-300">Google Scholar<span class="align-super text-xs">↗</span></a>
+                </div>
+                <div class="flex flex-row items-center justify-start gap-2 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"/>
+                    </svg>
+                    <a href="mailto:jh_zeng@tju.edu.cn" target="_blank" class="hover:text-orange-300">Email<span class="align-super text-xs">↗</span></a>
+                </div>
+                <div class="flex flex-row items-center justify-start gap-2 dark:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078c-.271.73-.5 1.434-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58.104 58.104 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.223 9.223 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177c.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607c-.523.468-1.58.82-2.64.516c2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753c-.594 1.095-1.603 1.122-1.907 1.155c.906-1.821 1.416-3.6 1.591-4.064c.425-1.124 1.671-1.125 1.671-1.125zM13.078 6h6.377v11.33h-2.573l-2.184 1.373l-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937l1.455-.938h1.456v-8.86z"/></svg>
+                    <a href="https://www.zhihu.com/people/maelstorms" target="_blank" class="hover:text-orange-300">Zhihu<span class="align-super text-xs">↗</span></a>
+                </div>
+            </div>
+
+            <footer class="mt-16 mb-8 text-gray-500">Site last update: <span class="font-mono">2025.08.31</span></footer>
+        </main>
+
+
+        <script>
+        const jobContainers = document.querySelectorAll(".summary");
+        jobContainers.forEach(container => {
+            const detail = container.querySelector(".detail");
+            const arrow = container.querySelector(".arrow");
+            container.addEventListener("click", () => {
+                detail.classList.toggle("max-h-0");
+                detail.classList.toggle("opacity-0");
+                detail.classList.toggle("max-h-40");
+                detail.classList.toggle("opacity-100");
+                arrow.classList.toggle("rotate-90");
+            });
+        });
+
+
+        if (
+            localStorage.theme === 'dark' ||
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+
+        // 切换按钮
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark')
+            localStorage.theme = 'light'
+            } else {
+            document.documentElement.classList.add('dark')
+            localStorage.theme = 'dark'
+            }
+        })
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="./output.css" rel="stylesheet" />
+        <title>Jianhao Zeng's HomePage</title>
+        <link rel="shortcut icon" href="./public/avatar.jpg">
+    </head>
+    <body class="font-sans relative dark:bg-neutral-900">
+
+        <!-- SVG -->
+        <svg style="display:none;">
+            <symbol id="icon-greater" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6s6 4.419 6 6s-6 6-6 6" color="currentColor"/>
+            </symbol>
+        </svg>
+        <svg style="display:none;">
+            <symbol id="icon-sun" viewBox="0 0 16 16">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 1v2m0 10v2m5-7h2M1 8h2m8.5 3.5L13 13M4.5 4.5L3 3m8.5 1.5L13 3m-8.5 8.5L3 13m8-5a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" color="currentColor"/>
+            </symbol>
+        </svg>
+        <svg style="display:none;">
+            <symbol id="icon-moon" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21C15.53 21 18.59 18.96 20.06 16C20.06 16 14 17.5 11 13C8 8.5 12 3 12 3Z">
+            </symbol>
+        </svg>
+       <svg style="display:none;">
+            <symbol id="icon-photo" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><path d="M15 8h.01M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6z"/><path d="m3 16l5-5c.928-.893 2.072-.893 3 0l5 5"/><path d="m14 14l1-1c.928-.893 2.072-.893 3 0l3 3"/></g>
+            </symbol>
+        </svg>
+       <svg style="display:none;">
+            <symbol id="icon-paper" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="m7.918 17.807l7.89-7.553a2.253 2.253 0 0 0 0-3.284a2.503 2.503 0 0 0-3.43 0l-7.834 7.498a4.28 4.28 0 0 0 0 6.24c1.8 1.723 4.718 1.723 6.518 0l7.949-7.608c2.652-2.54 2.652-6.656 0-9.196c-2.653-2.539-6.954-2.539-9.607 0L3 10.034"/>
+            </symbol>
+        </svg>
+       <svg style="display:none;">
+            <symbol id="icon-grid" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 2v20M17 2v20m5-15H2m20 10H2" color="currentColor"/>
+            </symbol>
+        </svg>
+
+
+        <header class="flex flex-row items-start justify-between mx-auto p-8">
+            <a href="./index.html" class="text-lg font-normal text-black dark:text-white">Jianhao</a>
+            <div class="flex flex-row items-start justify-start gap-x-6">
+                <a href="./Publications.html" class="hidden sm:block text-base font-normal text-black hover:text-orange-300 dark:text-white">Publications</a>
+                <a href="./Publications.html" class="block sm:hidden text-black hover:text-orange-300 dark:text-white"><svg class="w-6 h-6"><use href="#icon-paper"></svg></a>
+                <a href="./Photography.html" class="hidden sm:block text-base font-normal text-black hover:text-orange-300 dark:text-white">Photography</a>
+                <a href="./Photography.html" class="block sm:hidden text-black hover:text-orange-300 dark:text-white"><svg class="w-6 h-6"><use href="#icon-photo"></svg></a>
+                <button id="theme-toggle" class="text-black hover:text-orange-300 dark:text-white">
+                    <svg class="w-6 h-6 block dark:hidden"><use href="#icon-sun"></svg>
+                    <svg class="w-6 h-6 hidden dark:block"><use href="#icon-moon"></svg>
+                </button>
+            </div>
+        </header>
+
+        <button id="toggleView" class="p-8 py-2 text-black dark:text-white rounded-lg">
+            <svg class="w-4 h-4"><use href="#icon-grid"></svg>
+        </button>
+        <main class="px-8">
+            <div id="gallery" class="flex flex-row items-start justify-start gap-8 my-4">
+                <p class="text-base font-normal text-black font-mono tracking-tighter dark:text-white">2025</p>
+                <div class="w-full grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0070.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0069.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0068.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0067.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0066.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0065.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0064.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0063.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0062.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0061.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0060.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0059.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0058.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0057.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0056.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0055.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0054.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0053.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0052.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0051.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0050.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0049.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0048.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0047.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0046.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0045.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0044.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0043.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0042.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0041.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0040.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0039.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0038.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0037.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0036.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0035.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0034.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0033.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0032.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0031.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0030.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0029.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0028.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0027.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0026.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0025.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0024.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0023.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0022.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0021.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0020.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0019.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0018.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0017.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0016.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0015.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0014.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0013.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0012.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0011.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0010.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0009.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0008.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0007.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0006.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0005.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0004.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0003.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0002.jpg" class="w-full h-full object-cover"></div>
+                    <div class="aspect-square overflow-hidden"><img src="./public/Photo/2025/0001.jpg" class="w-full h-full object-cover"></div>
+
+
+                </div>
+
+        </main>
+        <script>
+
+            const btn = document.getElementById("toggleView");
+            const gallery = document.getElementById("gallery");
+            const items = gallery.querySelectorAll(".grid > div"); // Corrected selector
+
+            btn.addEventListener("click", () => {
+                // Find all image containers (divs that are direct children of the .grid div)
+                items.forEach(item => {
+                    // Find the image element inside this container
+                    const img = item.querySelector("img");
+
+                    // Toggle the classes
+                    if (item.classList.contains("aspect-square")) {
+                        item.classList.remove("aspect-square", "overflow-hidden");
+                        item.classList.add("aspect-auto");
+                        img.classList.remove("h-full", "object-cover");
+                        img.classList.add("h-auto", "object-contain");
+                    } else {
+                        item.classList.remove("aspect-auto");
+                        item.classList.add("aspect-square", "overflow-hidden");
+                        img.classList.remove("h-auto", "object-contain");
+                        img.classList.add("h-full", "object-cover");
+                    }
+                });
+            });
+
+
+            if (
+                localStorage.theme === 'dark' ||
+                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ) {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+
+            // 切换按钮
+            document.getElementById('theme-toggle').addEventListener('click', () => {
+                if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark')
+                localStorage.theme = 'light'
+                } else {
+                document.documentElement.classList.add('dark')
+                localStorage.theme = 'dark'
+                }
+            })
+        </script>
+    </body>
+</html>
