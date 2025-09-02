@@ -991,6 +991,11 @@ video {
   background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:bg-neutral-950:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
+}
+
 .dark\:text-gray-400:where(.dark, .dark *) {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
