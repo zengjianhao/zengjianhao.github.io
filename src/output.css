@@ -5,7 +5,6 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
@@ -22,11 +21,7 @@
     --default-mono-font-family: var(--font-mono);
     --color-rurikon-100: #d8dbdf;
     --color-rurikon-200: #b3b9c1;
-    --color-rurikon-300: #8c95a1;
     --color-rurikon-400: #697381;
-    --color-rurikon-500: #4a515b;
-    --color-rurikon-600: #3b4149;
-    --color-rurikon-700: #2b3035;
     --color-rurikon-800: #1e2125;
     --color-rurikon-border: #d8dbdfb3;
     --font-merriweather: "Merriweather", serif;
@@ -188,6 +183,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -223,6 +221,9 @@
   }
   .block {
     display: block;
+  }
+  .contents {
+    display: contents;
   }
   .flex {
     display: flex;
@@ -275,11 +276,11 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .space-y-7 {
+  .space-y-4 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 7) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 7) * calc(1 - var(--tw-space-y-reverse)));
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .overflow-hidden {
