@@ -1,6 +1,4 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -277,20 +275,6 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .space-y-4 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
-  .space-y-5 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
   .space-y-7 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -327,9 +311,6 @@
   }
   .font-mono {
     font-family: var(--font-mono);
-  }
-  .font-serif {
-    font-family: var(--font-serif);
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -379,20 +360,8 @@
   .text-rurikon-200 {
     color: var(--color-rurikon-200);
   }
-  .text-rurikon-300 {
-    color: var(--color-rurikon-300);
-  }
   .text-rurikon-400 {
     color: var(--color-rurikon-400);
-  }
-  .text-rurikon-500 {
-    color: var(--color-rurikon-500);
-  }
-  .text-rurikon-600 {
-    color: var(--color-rurikon-600);
-  }
-  .text-rurikon-700 {
-    color: var(--color-rurikon-700);
   }
   .text-rurikon-800 {
     color: var(--color-rurikon-800);
@@ -406,9 +375,6 @@
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .decoration-rurikon-300 {
-    text-decoration-color: var(--color-rurikon-300);
   }
   .decoration-rurikon-400 {
     text-decoration-color: var(--color-rurikon-400);
@@ -441,20 +407,6 @@
       }
     }
   }
-  .group-hover\:text-rurikon-500 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-rurikon-500);
-      }
-    }
-  }
-  .group-hover\:text-rurikon-700 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-rurikon-700);
-      }
-    }
-  }
   .group-hover\:text-rurikon-800 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -468,45 +420,10 @@
       content: var(--tw-content);
     }
   }
-  .hover\:text-rurikon-400 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-rurikon-400);
-      }
-    }
-  }
-  .hover\:text-rurikon-600 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-rurikon-600);
-      }
-    }
-  }
-  .hover\:text-rurikon-700 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-rurikon-700);
-      }
-    }
-  }
   .hover\:text-rurikon-800 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-rurikon-800);
-      }
-    }
-  }
-  .hover\:decoration-rurikon-600 {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-color: var(--color-rurikon-600);
-      }
-    }
-  }
-  .hover\:decoration-rurikon-700 {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-color: var(--color-rurikon-700);
       }
     }
   }
