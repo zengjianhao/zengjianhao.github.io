@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-mobile: 420px;
+    --color-rurikon-50: #ebedef;
+    --color-rurikon-100: #d8dbdf;
+    --color-rurikon-200: #b3b9c1;
+    --color-rurikon-300: #8c95a1;
+    --color-rurikon-400: #697381;
+    --color-rurikon-500: #4a515b;
+    --color-rurikon-600: #3b4149;
+    --color-rurikon-700: #2b3035;
+    --color-rurikon-800: #1e2125;
+    --color-rurikon-border: #d8dbdfb3;
+    --color-highlight: #26619C;
+    --color-yale-50: #EBF3F9;
+    --color-yale-100: #D8E7F3;
+    --color-yale-200: #B0CFE8;
+    --color-yale-300: #89B7DC;
+    --color-yale-400: #629FD0;
+    --color-yale-500: #3B86C4;
+    --color-yale-600: #2F6C9D;
+    --color-yale-700: #235176;
+    --color-yale-800: #17364F;
+    --color-yale-900: #0C1B27;
+    --color-yale-950: #08131B;
+    --font-merriweather: "Merriweather", serif;
+    --font-lora: "Lora", serif;
+}
