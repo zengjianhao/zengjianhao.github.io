@@ -26,6 +26,7 @@
     --color-rurikon-border: #d8dbdfb3;
     --font-merriweather: "Merriweather", serif;
     --font-lora: "Lora", serif;
+    --font-monospace: "Google Sans Code", monospace;
   }
 }
 @layer base {
@@ -313,6 +314,9 @@
   .font-mono {
     font-family: var(--font-mono);
   }
+  .font-monospace {
+    font-family: var(--font-monospace);
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -352,8 +356,8 @@
     --tw-tracking: 6px;
     letter-spacing: 6px;
   }
-  .wrap-break-word {
-    overflow-wrap: break-word;
+  .wrap-anywhere {
+    overflow-wrap: anywhere;
   }
   .text-rurikon-100 {
     color: var(--color-rurikon-100);
@@ -400,9 +404,6 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .\[view-transition-name\:main-content\] {
-    view-transition-name: main-content;
   }
   .group-hover\:text-rurikon-400 {
     &:is(:where(.group):hover *) {
@@ -468,6 +469,11 @@
       width: 1px;
     }
   }
+  .mobile\:flex-col {
+    @media (width >= 420px) {
+      flex-direction: column;
+    }
+  }
   .mobile\:flex-row {
     @media (width >= 420px) {
       flex-direction: row;
@@ -496,11 +502,6 @@
   .sm\:mr-10 {
     @media (width >= 40rem) {
       margin-right: calc(var(--spacing) * 10);
-    }
-  }
-  .sm\:flex-col {
-    @media (width >= 40rem) {
-      flex-direction: column;
     }
   }
   .sm\:p-10 {
