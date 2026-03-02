@@ -304,6 +304,22 @@
         </main>
         <div>
 
+            <script>
+                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                    const reveal = () => {
+                        const container = img.parentElement;
+                        container.classList.remove('aspect-[4/3]', 'bg-gray-100');
+                        img.classList.remove('h-full');
+                        img.classList.add('h-auto');
+                    };
+                    if (img.complete) {
+                        reveal();
+                    } else {
+                        img.addEventListener('load', reveal);
+                    }
+                });
+            </script>
+
 </body>
 
 
