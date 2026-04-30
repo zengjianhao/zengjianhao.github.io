@@ -1,5 +1,5 @@
 window.memoryImageConfig = {
-    baseUrl: "https://res.cloudinary.com/dhjewthzp/image/upload/c_scale,w_800/q_auto/f_auto/",
+    baseUrl: "https://res.cloudinary.com/dhjewthzp/image/upload/q_auto/f_auto/",
     groups: [
         {
             year: "2026",
