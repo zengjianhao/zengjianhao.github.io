@@ -1,0 +1,448 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C15FQGGNEF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-C15FQGGNEF');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Travel · Jianhao Zeng</title>
+    <link rel="shortcut icon" href="./public/avatar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <style>
+        .travel-main {
+            max-width: 42rem;
+        }
+
+        .travel-shell {
+            color: #697381;
+        }
+
+        .travel-title {
+            margin: 0;
+            color: #1e2125;
+            font-weight: 600;
+        }
+
+        .travel-deck {
+            max-width: 38rem;
+            margin-top: 1.75rem;
+        }
+
+        .travel-map-layout {
+            display: grid;
+            margin-top: 1.75rem;
+        }
+
+        .travel-map-panel {
+            border: 1px solid rgba(216, 219, 223, 0.82);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.74);
+            box-shadow: 0 12px 32px rgba(30, 33, 37, 0.04);
+        }
+
+        .travel-map-panel {
+            position: relative;
+            min-height: 24rem;
+            overflow: hidden;
+        }
+
+        .travel-map-viewport {
+            position: relative;
+            height: min(78vh, 42rem);
+            min-height: 24rem;
+            overflow: hidden;
+            cursor: grab;
+            background: #f8f9fa;
+            touch-action: none;
+        }
+
+        .travel-map-viewport.is-dragging {
+            cursor: grabbing;
+        }
+
+        .travel-map-viewport:fullscreen {
+            width: 100vw;
+            height: 100vh;
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+
+        .travel-map-viewport:-webkit-full-screen {
+            width: 100vw;
+            height: 100vh;
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+
+        .travel-map-stage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2677px;
+            height: 3000px;
+            transform: translate(-50%, -50%) scale(0.2);
+            transform-origin: center;
+            will-change: transform;
+        }
+
+        .travel-map-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .travel-control:focus-visible {
+            outline: 2px solid rgba(47, 108, 157, 0.62);
+            outline-offset: 3px;
+        }
+
+        .travel-map-controls {
+            position: absolute;
+            top: 0.75rem;
+            left: 0.75rem;
+            z-index: 4;
+            display: flex;
+            overflow: hidden;
+            border: 1px solid rgba(216, 219, 223, 0.9);
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 8px 22px rgba(30, 33, 37, 0.08);
+        }
+
+        .travel-control {
+            display: grid;
+            width: 2rem;
+            height: 2rem;
+            place-items: center;
+            border: 0;
+            border-right: 1px solid rgba(216, 219, 223, 0.8);
+            color: #697381;
+            background: transparent;
+            cursor: pointer;
+            font-family: "Google Sans Code", monospace;
+            font-size: 0.95rem;
+            line-height: 1;
+            transition: color 150ms ease, background 150ms ease;
+        }
+
+        .travel-control svg {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2;
+        }
+
+        .travel-control:last-child {
+            width: auto;
+            min-width: 3.2rem;
+            padding: 0 0.65rem;
+            border-right: 0;
+            font-size: 0.7rem;
+        }
+
+        .travel-control:hover {
+            color: #1e2125;
+            background: #ebedef;
+        }
+
+        @media (min-width: 900px) {
+            .travel-map-layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+            .travel-map-viewport {
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="
+    w-full
+    p-6 sm:p-10 md:p-14
+    text-[14px] sm:text-[15px] md:text-[16px]
+    leading-6 sm:leading-7 md:leading-7
+    antialiased
+">
+    <div class="flex flex-col mobile:flex-row">
+        <nav class="
+            w-full mobile:w-24
+            mr-0 mobile:mr-6 sm:mr-10 md:mr-14
+        ">
+            <ul class="
+                mobile:sticky top-6 sm:top-10 md:top-14
+                mb-6 mobile:mb-0
+                flex flex-row justify-start items-end gap-2 mobile:flex-col
+                font-lora italic
+            ">
+                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
+                    <a class="inline-block w-full px-4" draggable="false" href="./index.html">About</a>
+                </li>
+                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
+                    <a class="inline-block w-full px-4" draggable="false" href="./experience.html">Experience</a>
+                </li>
+                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
+                    <a class="inline-block w-full px-4" draggable="false" href="./publications.html">Publications</a>
+                </li>
+                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
+                    <a class="inline-block w-full px-4" draggable="false" href="./memory.html">Memory</a>
+                </li>
+                <li class="text-rurikon-800 -mx-4">
+                    <a class="inline-block w-full px-4" draggable="false" href="./travel.html">Travel</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <main class="relative flex-1 travel-main">
+            <div class="
+                absolute
+                w-full h-px mobile:h-full mobile:w-px
+                opacity-50 mobile:opacity-100
+                bg-rurikon-border mix-blend-multiply
+                top-0 left-0
+            ">
+            </div>
+            <article class="
+                font-merriweather
+                pl-0 mobile:pl-6 sm:pl-10 md:pl-14
+                pt-6 mobile:pt-0
+                travel-shell
+            ">
+                <h1 class="travel-title">Travel</h1>
+                <p class="travel-deck">
+                    A quiet record of cities and regions I have visited across China, from long stays to brief crossings.
+                </p>
+
+                <section class="travel-map-layout" aria-label="China footprint map">
+                    <div class="travel-map-panel">
+                        <div id="travel-map-viewport" class="travel-map-viewport" aria-label="Interactive static China footprint map">
+                            <div class="travel-map-controls" aria-label="Map controls">
+                                <button id="travel-zoom-out" class="travel-control" type="button" aria-label="Zoom out" title="Zoom out">-</button>
+                                <button id="travel-zoom-in" class="travel-control" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+                                <button id="travel-fullscreen" class="travel-control" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+                                        <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+                                        <path d="M8 21H5a2 2 0 0 1-2-2v-3"></path>
+                                        <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+                                    </svg>
+                                </button>
+                                <button id="travel-reset" class="travel-control" type="button" aria-label="Reset map" title="Reset map">Reset</button>
+                            </div>
+                            <div id="travel-map-stage" class="travel-map-stage">
+                                <img class="travel-map-image" src="./public/Travel.png" alt="China map with highlighted visited areas" draggable="false">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        const imageWidth = 2677;
+        const imageHeight = 3000;
+        const viewportElement = document.getElementById("travel-map-viewport");
+        const stageElement = document.getElementById("travel-map-stage");
+        const zoomInButton = document.getElementById("travel-zoom-in");
+        const zoomOutButton = document.getElementById("travel-zoom-out");
+        const fullscreenButton = document.getElementById("travel-fullscreen");
+        const resetButton = document.getElementById("travel-reset");
+
+        let fitScale = 1;
+        let zoom = 1;
+        let panX = 0;
+        let panY = 0;
+        let dragStart = null;
+
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+        const getMaxZoom = () => {
+            return Math.max(4, Math.min(10, Number((1 / fitScale).toFixed(2))));
+        };
+
+        const getRenderedSize = () => {
+            const scale = fitScale * zoom;
+            return {
+                width: imageWidth * scale,
+                height: imageHeight * scale,
+            };
+        };
+
+        const constrainPan = () => {
+            const viewportRect = viewportElement.getBoundingClientRect();
+            const renderedSize = getRenderedSize();
+            const maxPanX = Math.max(0, (renderedSize.width - viewportRect.width) / 2);
+            const maxPanY = Math.max(0, (renderedSize.height - viewportRect.height) / 2);
+            panX = clamp(panX, -maxPanX, maxPanX);
+            panY = clamp(panY, -maxPanY, maxPanY);
+        };
+
+        const applyTransform = () => {
+            constrainPan();
+            stageElement.style.transform = "translate(calc(-50% + " + panX + "px), calc(-50% + " + panY + "px)) scale(" + (fitScale * zoom) + ")";
+        };
+
+        const measureFitScale = () => {
+            const viewportRect = viewportElement.getBoundingClientRect();
+            const padding = 32;
+            fitScale = Math.min(
+                (viewportRect.width - padding) / imageWidth,
+                (viewportRect.height - padding) / imageHeight,
+                1
+            );
+            zoom = clamp(zoom, 1, getMaxZoom());
+            applyTransform();
+        };
+
+        const resetMap = () => {
+            zoom = 1;
+            panX = 0;
+            panY = 0;
+            applyTransform();
+        };
+
+        const zoomMap = (step) => {
+            zoom = clamp(Number((zoom + step).toFixed(2)), 1, getMaxZoom());
+            applyTransform();
+        };
+
+        const getFullscreenElement = () => {
+            return document.fullscreenElement || document.webkitFullscreenElement || null;
+        };
+
+        const updateFullscreenButton = () => {
+            const isFullscreen = getFullscreenElement() === viewportElement;
+            const label = isFullscreen ? "Exit fullscreen" : "Enter fullscreen";
+            fullscreenButton.setAttribute("aria-label", label);
+            fullscreenButton.title = label;
+        };
+
+        const toggleFullscreen = () => {
+            if (getFullscreenElement()) {
+                const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
+                if (exitFullscreen) {
+                    exitFullscreen.call(document);
+                }
+                return;
+            }
+
+            const requestFullscreen = viewportElement.requestFullscreen || viewportElement.webkitRequestFullscreen;
+            if (requestFullscreen) {
+                requestFullscreen.call(viewportElement);
+            }
+        };
+
+        viewportElement.addEventListener("pointerdown", (event) => {
+            if (event.target.closest("button")) {
+                return;
+            }
+
+            viewportElement.setPointerCapture(event.pointerId);
+            viewportElement.classList.add("is-dragging");
+            dragStart = {
+                pointerId: event.pointerId,
+                startX: event.clientX,
+                startY: event.clientY,
+                panX,
+                panY,
+            };
+        });
+
+        viewportElement.addEventListener("pointermove", (event) => {
+            if (!dragStart || dragStart.pointerId !== event.pointerId) {
+                return;
+            }
+
+            panX = dragStart.panX + event.clientX - dragStart.startX;
+            panY = dragStart.panY + event.clientY - dragStart.startY;
+            applyTransform();
+        });
+
+        viewportElement.addEventListener("pointerup", () => {
+            viewportElement.classList.remove("is-dragging");
+            dragStart = null;
+        });
+
+        viewportElement.addEventListener("pointercancel", () => {
+            viewportElement.classList.remove("is-dragging");
+            dragStart = null;
+        });
+
+        viewportElement.addEventListener("wheel", (event) => {
+            event.preventDefault();
+            zoomMap(event.deltaY > 0 ? -0.24 : 0.24);
+        }, { passive: false });
+
+        viewportElement.addEventListener("dblclick", () => zoomMap(0.45));
+
+        zoomInButton.addEventListener("click", () => zoomMap(0.35));
+        zoomOutButton.addEventListener("click", () => zoomMap(-0.35));
+        fullscreenButton.addEventListener("click", toggleFullscreen);
+        resetButton.addEventListener("click", resetMap);
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "+" || event.key === "=") {
+                zoomMap(0.35);
+            }
+
+            if (event.key === "-") {
+                zoomMap(-0.35);
+            }
+
+            if (event.key === "0") {
+                resetMap();
+            }
+        });
+
+        document.addEventListener("fullscreenchange", () => {
+            updateFullscreenButton();
+            requestAnimationFrame(measureFitScale);
+        });
+
+        document.addEventListener("webkitfullscreenchange", () => {
+            updateFullscreenButton();
+            requestAnimationFrame(measureFitScale);
+        });
+
+        if (!document.fullscreenEnabled && !document.webkitFullscreenEnabled) {
+            fullscreenButton.hidden = true;
+        }
+
+        window.addEventListener("resize", measureFitScale);
+        updateFullscreenButton();
+        measureFitScale();
+    </script>
+
+</body>
+
+
+</html>

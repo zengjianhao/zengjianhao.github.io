@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "sync:analytics": "node scripts/sync-analytics-to-notion.mjs"
   },
   "keywords": [],
   "author": "",
