@@ -4,10 +4,12 @@ window.memoryImageConfig = {
         {
             year: "2026",
             images: [
-                "v1777462880/0090a151a99afbfb7816f28aad28a4fc_r3cyww.png",
-                "v1777462886/3f1ae7ac236b492d27e41e43277af499_rjqzsx.png",
-                "v1777462891/df0ebd7072d67a8a3e1fd2251bfd0aa4_jyaxrj.png",
-                "v1777462889/a89845fce04b110876ccaa0ac363fe01_qs7msh.png",
+                "pbwpgbxtqki0wmbkvgp2",
+                "csvwturahszoyudkrp4m",
+                "sbwi81okgr67fg6dzpmq",
+                "z7dxbu5ypujd5o6cdd1y",
+                "wrgal5effwydik3gtnlt",
+                "tpamoqsickivnmnqqsus",
                 "v1777475839/d9izwvisfm1a65y9syca.jpg",
                 "v1777475837/kvmuioha5ncexdqttd71.jpg",
                 "v1777475834/nbds0hs3pxdbp51axwb6.jpg",
