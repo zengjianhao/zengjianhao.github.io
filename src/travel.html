@@ -46,9 +46,24 @@
             margin-top: 1.75rem;
         }
 
+        .travel-map-section {
+            margin-top: 1.75rem;
+        }
+
+        .travel-map-section + .travel-map-section {
+            margin-top: 3rem;
+        }
+
+        .travel-section-title {
+            margin: 0;
+            color: #1e2125;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
         .travel-map-layout {
             display: grid;
-            margin-top: 1.75rem;
+            margin-top: 1rem;
         }
 
         .travel-map-panel {
@@ -71,11 +86,16 @@
             overflow: hidden;
             cursor: grab;
             background: #f8f9fa;
-            touch-action: none;
+            touch-action: pan-y pinch-zoom;
         }
 
         .travel-map-viewport.is-dragging {
             cursor: grabbing;
+        }
+
+        .travel-map-viewport:focus-visible {
+            outline: 2px solid rgba(47, 108, 157, 0.62);
+            outline-offset: -3px;
         }
 
         .travel-map-viewport:fullscreen {
@@ -96,9 +116,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 2677px;
-            height: 3000px;
-            transform: translate(-50%, -50%) scale(0.2);
+            transform: translate(-50%, -50%);
             transform-origin: center;
             will-change: transform;
         }
@@ -238,27 +256,56 @@
             ">
                 <h1 class="travel-title">Travel</h1>
                 <p class="travel-deck">
-                    A quiet record of cities and regions I have visited across China.
+                    A quiet record of places I have visited and routes I have flown.
                 </p>
 
-                <section class="travel-map-layout" aria-label="China footprint map">
-                    <div class="travel-map-panel">
-                        <div id="travel-map-viewport" class="travel-map-viewport" aria-label="Interactive static China footprint map">
-                            <div class="travel-map-controls" aria-label="Map controls">
-                                <button id="travel-zoom-out" class="travel-control" type="button" aria-label="Zoom out" title="Zoom out">-</button>
-                                <button id="travel-zoom-in" class="travel-control" type="button" aria-label="Zoom in" title="Zoom in">+</button>
-                                <button id="travel-fullscreen" class="travel-control" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
-                                        <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
-                                        <path d="M8 21H5a2 2 0 0 1-2-2v-3"></path>
-                                        <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
-                                    </svg>
-                                </button>
-                                <button id="travel-reset" class="travel-control" type="button" aria-label="Reset map" title="Reset map">Reset</button>
+                <section class="travel-map-section" aria-labelledby="places-visited-title">
+                    <h2 id="places-visited-title" class="travel-section-title">Places Visited</h2>
+                    <div class="travel-map-layout">
+                        <div class="travel-map-panel">
+                            <div class="travel-map-viewport" data-travel-map tabindex="0" role="group" aria-label="Interactive map of places visited in China">
+                                <div class="travel-map-controls" role="group" aria-label="Places Visited map controls">
+                                    <button class="travel-control" data-map-action="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">-</button>
+                                    <button class="travel-control" data-map-action="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+                                    <button class="travel-control" data-map-action="fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+                                            <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+                                            <path d="M8 21H5a2 2 0 0 1-2-2v-3"></path>
+                                            <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="travel-control" data-map-action="reset" type="button" aria-label="Reset map" title="Reset map">Reset</button>
+                                </div>
+                                <div class="travel-map-stage" data-map-stage>
+                                    <img class="travel-map-image" data-map-image src="./public/Travel.png" alt="China map with highlighted visited areas" draggable="false">
+                                </div>
                             </div>
-                            <div id="travel-map-stage" class="travel-map-stage">
-                                <img class="travel-map-image" src="./public/Travel.png" alt="China map with highlighted visited areas" draggable="false">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="travel-map-section" aria-labelledby="flight-routes-title">
+                    <h2 id="flight-routes-title" class="travel-section-title">Flight Routes</h2>
+                    <div class="travel-map-layout">
+                        <div class="travel-map-panel">
+                            <div class="travel-map-viewport" data-travel-map tabindex="0" role="group" aria-label="Interactive map of flight routes between China and Japan">
+                                <div class="travel-map-controls" role="group" aria-label="Flight Routes map controls">
+                                    <button class="travel-control" data-map-action="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">-</button>
+                                    <button class="travel-control" data-map-action="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button>
+                                    <button class="travel-control" data-map-action="fullscreen" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+                                            <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+                                            <path d="M8 21H5a2 2 0 0 1-2-2v-3"></path>
+                                            <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="travel-control" data-map-action="reset" type="button" aria-label="Reset map" title="Reset map">Reset</button>
+                                </div>
+                                <div class="travel-map-stage" data-map-stage>
+                                    <img class="travel-map-image" data-map-image src="./public/Flight.png" alt="Map of East Asia showing the author's flight routes between airports in China and Japan." draggable="false">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -268,178 +315,248 @@
     </div>
 
     <script>
-        const imageWidth = 2677;
-        const imageHeight = 3000;
-        const viewportElement = document.getElementById("travel-map-viewport");
-        const stageElement = document.getElementById("travel-map-stage");
-        const zoomInButton = document.getElementById("travel-zoom-in");
-        const zoomOutButton = document.getElementById("travel-zoom-out");
-        const fullscreenButton = document.getElementById("travel-fullscreen");
-        const resetButton = document.getElementById("travel-reset");
-
-        let fitScale = 1;
-        let zoom = 1;
-        let panX = 0;
-        let panY = 0;
-        let dragStart = null;
-
         const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-
-        const getMaxZoom = () => {
-            return Math.max(4, Math.min(10, Number((1 / fitScale).toFixed(2))));
-        };
-
-        const getRenderedSize = () => {
-            const scale = fitScale * zoom;
-            return {
-                width: imageWidth * scale,
-                height: imageHeight * scale,
-            };
-        };
-
-        const constrainPan = () => {
-            const viewportRect = viewportElement.getBoundingClientRect();
-            const renderedSize = getRenderedSize();
-            const maxPanX = Math.max(0, (renderedSize.width - viewportRect.width) / 2);
-            const maxPanY = Math.max(0, (renderedSize.height - viewportRect.height) / 2);
-            panX = clamp(panX, -maxPanX, maxPanX);
-            panY = clamp(panY, -maxPanY, maxPanY);
-        };
-
-        const applyTransform = () => {
-            constrainPan();
-            stageElement.style.transform = "translate(calc(-50% + " + panX + "px), calc(-50% + " + panY + "px)) scale(" + (fitScale * zoom) + ")";
-        };
-
-        const measureFitScale = () => {
-            const viewportRect = viewportElement.getBoundingClientRect();
-            const padding = 32;
-            fitScale = Math.min(
-                (viewportRect.width - padding) / imageWidth,
-                (viewportRect.height - padding) / imageHeight,
-                1
-            );
-            zoom = clamp(zoom, 1, getMaxZoom());
-            applyTransform();
-        };
-
-        const resetMap = () => {
-            zoom = 1;
-            panX = 0;
-            panY = 0;
-            applyTransform();
-        };
-
-        const zoomMap = (step) => {
-            zoom = clamp(Number((zoom + step).toFixed(2)), 1, getMaxZoom());
-            applyTransform();
-        };
 
         const getFullscreenElement = () => {
             return document.fullscreenElement || document.webkitFullscreenElement || null;
         };
 
-        const updateFullscreenButton = () => {
-            const isFullscreen = getFullscreenElement() === viewportElement;
-            const label = isFullscreen ? "Exit fullscreen" : "Enter fullscreen";
-            fullscreenButton.setAttribute("aria-label", label);
-            fullscreenButton.title = label;
-        };
+        const initTravelMap = (viewportElement) => {
+            const stageElement = viewportElement.querySelector("[data-map-stage]");
+            const imageElement = viewportElement.querySelector("[data-map-image]");
+            const zoomInButton = viewportElement.querySelector('[data-map-action="zoom-in"]');
+            const zoomOutButton = viewportElement.querySelector('[data-map-action="zoom-out"]');
+            const fullscreenButton = viewportElement.querySelector('[data-map-action="fullscreen"]');
+            const resetButton = viewportElement.querySelector('[data-map-action="reset"]');
 
-        const toggleFullscreen = () => {
-            if (getFullscreenElement()) {
-                const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
-                if (exitFullscreen) {
-                    exitFullscreen.call(document);
-                }
-                return;
+            if (!stageElement || !imageElement || !zoomInButton || !zoomOutButton || !fullscreenButton || !resetButton) {
+                return null;
             }
 
-            const requestFullscreen = viewportElement.requestFullscreen || viewportElement.webkitRequestFullscreen;
-            if (requestFullscreen) {
-                requestFullscreen.call(viewportElement);
-            }
-        };
+            let imageWidth = 0;
+            let imageHeight = 0;
+            let fitScale = 1;
+            let zoom = 1;
+            let panX = 0;
+            let panY = 0;
+            let dragStart = null;
 
-        viewportElement.addEventListener("pointerdown", (event) => {
-            if (event.target.closest("button")) {
-                return;
-            }
-
-            viewportElement.setPointerCapture(event.pointerId);
-            viewportElement.classList.add("is-dragging");
-            dragStart = {
-                pointerId: event.pointerId,
-                startX: event.clientX,
-                startY: event.clientY,
-                panX,
-                panY,
+            const getMaxZoom = () => {
+                return Math.max(4, Math.min(10, Number((1 / fitScale).toFixed(2))));
             };
-        });
 
-        viewportElement.addEventListener("pointermove", (event) => {
-            if (!dragStart || dragStart.pointerId !== event.pointerId) {
-                return;
+            const getRenderedSize = () => {
+                const scale = fitScale * zoom;
+                return {
+                    width: imageWidth * scale,
+                    height: imageHeight * scale,
+                };
+            };
+
+            const constrainPan = () => {
+                const viewportRect = viewportElement.getBoundingClientRect();
+                const renderedSize = getRenderedSize();
+                const maxPanX = Math.max(0, (renderedSize.width - viewportRect.width) / 2);
+                const maxPanY = Math.max(0, (renderedSize.height - viewportRect.height) / 2);
+                panX = clamp(panX, -maxPanX, maxPanX);
+                panY = clamp(panY, -maxPanY, maxPanY);
+            };
+
+            const applyTransform = () => {
+                if (!imageWidth || !imageHeight) {
+                    return;
+                }
+
+                viewportElement.style.touchAction = zoom > 1 ? "none" : "pan-y pinch-zoom";
+                constrainPan();
+                stageElement.style.transform = "translate(calc(-50% + " + panX + "px), calc(-50% + " + panY + "px)) scale(" + (fitScale * zoom) + ")";
+            };
+
+            const measureFitScale = () => {
+                if (!imageWidth || !imageHeight) {
+                    return;
+                }
+
+                const viewportRect = viewportElement.getBoundingClientRect();
+                const padding = 32;
+                fitScale = Math.max(0.01, Math.min(
+                    (viewportRect.width - padding) / imageWidth,
+                    (viewportRect.height - padding) / imageHeight,
+                    1
+                ));
+                zoom = clamp(zoom, 1, getMaxZoom());
+                applyTransform();
+            };
+
+            const resetMap = () => {
+                zoom = 1;
+                panX = 0;
+                panY = 0;
+                applyTransform();
+            };
+
+            const zoomMap = (step) => {
+                zoom = clamp(Number((zoom + step).toFixed(2)), 1, getMaxZoom());
+                applyTransform();
+            };
+
+            const updateFullscreenButton = () => {
+                const isFullscreen = getFullscreenElement() === viewportElement;
+                const label = isFullscreen ? "Exit fullscreen" : "Enter fullscreen";
+                fullscreenButton.setAttribute("aria-label", label);
+                fullscreenButton.title = label;
+            };
+
+            const toggleFullscreen = () => {
+                if (getFullscreenElement()) {
+                    const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
+                    if (exitFullscreen) {
+                        try {
+                            const fullscreenExit = exitFullscreen.call(document);
+                            if (fullscreenExit && typeof fullscreenExit.catch === "function") {
+                                fullscreenExit.catch(updateFullscreenButton);
+                            }
+                        } catch {
+                            updateFullscreenButton();
+                        }
+                    }
+                    return;
+                }
+
+                const requestFullscreen = viewportElement.requestFullscreen || viewportElement.webkitRequestFullscreen;
+                if (requestFullscreen) {
+                    try {
+                        const fullscreenRequest = requestFullscreen.call(viewportElement);
+                        if (fullscreenRequest && typeof fullscreenRequest.catch === "function") {
+                            fullscreenRequest.catch(updateFullscreenButton);
+                        }
+                    } catch {
+                        updateFullscreenButton();
+                    }
+                }
+            };
+
+            const endDrag = () => {
+                viewportElement.classList.remove("is-dragging");
+                dragStart = null;
+            };
+
+            const initializeImage = () => {
+                imageWidth = imageElement.naturalWidth;
+                imageHeight = imageElement.naturalHeight;
+
+                if (!imageWidth || !imageHeight) {
+                    return;
+                }
+
+                stageElement.style.width = imageWidth + "px";
+                stageElement.style.height = imageHeight + "px";
+                measureFitScale();
+            };
+
+            viewportElement.addEventListener("pointerdown", (event) => {
+                if (event.target.closest("button") || !imageWidth || !imageHeight) {
+                    return;
+                }
+
+                viewportElement.focus({ preventScroll: true });
+                viewportElement.setPointerCapture(event.pointerId);
+                viewportElement.classList.add("is-dragging");
+                dragStart = {
+                    pointerId: event.pointerId,
+                    startX: event.clientX,
+                    startY: event.clientY,
+                    panX,
+                    panY,
+                };
+            });
+
+            viewportElement.addEventListener("pointermove", (event) => {
+                if (!dragStart || dragStart.pointerId !== event.pointerId) {
+                    return;
+                }
+
+                panX = dragStart.panX + event.clientX - dragStart.startX;
+                panY = dragStart.panY + event.clientY - dragStart.startY;
+                applyTransform();
+            });
+
+            viewportElement.addEventListener("pointerup", endDrag);
+            viewportElement.addEventListener("pointercancel", endDrag);
+            viewportElement.addEventListener("lostpointercapture", endDrag);
+
+            viewportElement.addEventListener("wheel", (event) => {
+                const step = event.deltaY > 0 ? -0.24 : 0.24;
+                const nextZoom = clamp(Number((zoom + step).toFixed(2)), 1, getMaxZoom());
+                const isModifierZoom = event.ctrlKey || event.metaKey;
+                const isMapActive = viewportElement.matches(":focus-within");
+
+                if (!isModifierZoom && (!isMapActive || nextZoom === zoom)) {
+                    return;
+                }
+
+                event.preventDefault();
+                if (nextZoom !== zoom) {
+                    zoomMap(step);
+                }
+            }, { passive: false });
+
+            viewportElement.addEventListener("dblclick", () => zoomMap(0.45));
+
+            viewportElement.addEventListener("keydown", (event) => {
+                if (event.key === "+" || event.key === "=") {
+                    event.preventDefault();
+                    zoomMap(0.35);
+                }
+
+                if (event.key === "-") {
+                    event.preventDefault();
+                    zoomMap(-0.35);
+                }
+
+                if (event.key === "0") {
+                    event.preventDefault();
+                    resetMap();
+                }
+            });
+
+            zoomInButton.addEventListener("click", () => zoomMap(0.35));
+            zoomOutButton.addEventListener("click", () => zoomMap(-0.35));
+            fullscreenButton.addEventListener("click", toggleFullscreen);
+            resetButton.addEventListener("click", resetMap);
+
+            if (!document.fullscreenEnabled && !document.webkitFullscreenEnabled) {
+                fullscreenButton.hidden = true;
             }
 
-            panX = dragStart.panX + event.clientX - dragStart.startX;
-            panY = dragStart.panY + event.clientY - dragStart.startY;
-            applyTransform();
-        });
-
-        viewportElement.addEventListener("pointerup", () => {
-            viewportElement.classList.remove("is-dragging");
-            dragStart = null;
-        });
-
-        viewportElement.addEventListener("pointercancel", () => {
-            viewportElement.classList.remove("is-dragging");
-            dragStart = null;
-        });
-
-        viewportElement.addEventListener("wheel", (event) => {
-            event.preventDefault();
-            zoomMap(event.deltaY > 0 ? -0.24 : 0.24);
-        }, { passive: false });
-
-        viewportElement.addEventListener("dblclick", () => zoomMap(0.45));
-
-        zoomInButton.addEventListener("click", () => zoomMap(0.35));
-        zoomOutButton.addEventListener("click", () => zoomMap(-0.35));
-        fullscreenButton.addEventListener("click", toggleFullscreen);
-        resetButton.addEventListener("click", resetMap);
-
-        document.addEventListener("keydown", (event) => {
-            if (event.key === "+" || event.key === "=") {
-                zoomMap(0.35);
+            if (imageElement.complete && imageElement.naturalWidth) {
+                initializeImage();
+            } else {
+                imageElement.addEventListener("load", initializeImage, { once: true });
             }
 
-            if (event.key === "-") {
-                zoomMap(-0.35);
-            }
-
-            if (event.key === "0") {
-                resetMap();
-            }
-        });
-
-        document.addEventListener("fullscreenchange", () => {
             updateFullscreenButton();
-            requestAnimationFrame(measureFitScale);
-        });
 
-        document.addEventListener("webkitfullscreenchange", () => {
-            updateFullscreenButton();
-            requestAnimationFrame(measureFitScale);
-        });
+            return {
+                measureFitScale,
+                updateFullscreenButton,
+            };
+        };
 
-        if (!document.fullscreenEnabled && !document.webkitFullscreenEnabled) {
-            fullscreenButton.hidden = true;
-        }
+        const travelMaps = Array.from(document.querySelectorAll("[data-travel-map]"))
+            .map(initTravelMap)
+            .filter(Boolean);
 
-        window.addEventListener("resize", measureFitScale);
-        updateFullscreenButton();
-        measureFitScale();
+        const refreshTravelMaps = () => {
+            travelMaps.forEach((map) => {
+                map.updateFullscreenButton();
+                map.measureFitScale();
+            });
+        };
+
+        window.addEventListener("resize", refreshTravelMaps);
+        document.addEventListener("fullscreenchange", () => requestAnimationFrame(refreshTravelMaps));
+        document.addEventListener("webkitfullscreenchange", () => requestAnimationFrame(refreshTravelMaps));
     </script>
 
 </body>
