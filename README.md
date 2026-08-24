@@ -1,4 +1,4 @@
-# Hi! 👋
+# Hello :)
 
 This is my personal website, built with [Tailwind CSS](https://tailwindcss.com/).
 
