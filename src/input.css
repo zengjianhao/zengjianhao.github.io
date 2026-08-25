@@ -185,6 +185,79 @@ article a:hover img {
     transform: translateY(-1px) scale(1.03);
 }
 
+/* Publications — Bay Index interaction. */
+.publication-featured-list li,
+.publication-all-list li {
+    position: relative;
+    filter: none;
+    transform: none;
+    transition: transform 180ms ease, filter 180ms ease;
+}
+
+.publication-featured-list a > div > p:first-child,
+.publication-all-list a > p:first-child {
+    display: inline;
+    color: var(--color-rurikon-400);
+    background-image: linear-gradient(90deg, var(--bay-cyan), var(--bay-cobalt), var(--bay-peach));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0 0.12em;
+    transition: color 180ms ease, background-size 220ms ease;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.publication-featured-list li:hover,
+.publication-featured-list li:focus-within,
+.publication-all-list li:hover,
+.publication-all-list li:focus-within {
+    filter: drop-shadow(0 8px 14px rgb(23 50 77 / 8%));
+    transform: translateX(2px);
+}
+
+.publication-featured-list li:hover a > div > p:first-child,
+.publication-featured-list li:focus-within a > div > p:first-child,
+.publication-all-list li:hover a > p:first-child,
+.publication-all-list li:focus-within a > p:first-child {
+    color: #365bc3;
+    background-size: 100% 0.12em;
+}
+
+.publication-featured-list a img {
+    transition: opacity 180ms ease, transform 220ms ease, filter 220ms ease;
+}
+
+.publication-featured-list li:hover img,
+.publication-featured-list li:focus-within img {
+    filter: drop-shadow(0 7px 9px rgb(54 183 201 / 24%));
+    transform: translateY(-2px);
+}
+
+.publication-all-list {
+    padding-left: 1.15rem;
+    list-style: none;
+}
+
+.publication-all-list li::before {
+    position: absolute;
+    top: 0.55em;
+    left: -0.92rem;
+    width: 0.34rem;
+    height: 0.34rem;
+    border-radius: 9999px;
+    background: var(--bay-cyan);
+    box-shadow: 0 0 0 0 rgb(93 124 255 / 0%);
+    content: "";
+    transition: background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.publication-all-list li:hover::before,
+.publication-all-list li:focus-within::before {
+    background: var(--bay-cobalt);
+    box-shadow: 0 0 0 0.23rem rgb(93 124 255 / 12%);
+    transform: scale(1.35);
+}
+
 .memory-image-card {
     border: 1px solid rgb(54 183 201 / 20%);
     background: rgb(255 255 255 / 68%);
@@ -236,6 +309,17 @@ article a:hover img {
 }
 
 @media (max-width: 419px) {
+    nav a[aria-current="page"] {
+        color: #365bc3;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    nav a:not([aria-current="page"]):hover {
+        background: transparent;
+        transform: none;
+    }
+
     body::before {
         top: -6rem;
         right: -13rem;
