@@ -44,7 +44,8 @@
             display: grid;
             place-items: center;
             padding: clamp(1rem, 4vw, 3rem);
-            background: rgba(80, 84, 90, 0.86);
+            background: rgb(23 50 77 / 82%);
+            backdrop-filter: blur(12px);
         }
 
         .memory-lightbox[hidden] {
@@ -58,7 +59,7 @@
             max-height: 86vh;
             object-fit: contain;
             border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 24px 70px rgb(10 31 51 / 32%), 0 0 36px rgb(54 183 201 / 16%);
         }
 
         .memory-lightbox__button {
@@ -68,22 +69,23 @@
             width: 2.75rem;
             height: 2.75rem;
             padding: 0;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.28);
+            color: var(--color-rurikon-800);
+            border: 1px solid rgb(255 255 255 / 60%);
             border-radius: 9999px;
-            background: rgba(30, 33, 37, 0.72);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: rgb(255 255 255 / 82%);
+            box-shadow: 0 10px 30px rgb(10 31 51 / 22%), 0 0 18px rgb(54 183 201 / 10%);
+            backdrop-filter: blur(10px);
             cursor: pointer;
             transition: background 150ms ease, transform 150ms ease;
         }
 
         .memory-lightbox__button:hover,
         .memory-lightbox__button:focus-visible {
-            background: rgba(30, 33, 37, 0.92);
+            background: rgb(255 255 255 / 96%);
         }
 
         .memory-lightbox__button:focus-visible {
-            outline: 2px solid rgba(255, 255, 255, 0.82);
+            outline: 2px solid rgb(54 183 201 / 90%);
             outline-offset: 3px;
         }
 
