@@ -224,12 +224,14 @@ article a:hover img {
 }
 
 .publication-featured-list a img {
-    transition: opacity 180ms ease, transform 220ms ease, filter 220ms ease;
+    opacity: 1;
+    filter: none;
+    transition: transform 220ms ease;
 }
 
 .publication-featured-list li:hover img,
 .publication-featured-list li:focus-within img {
-    filter: drop-shadow(0 7px 9px rgb(54 183 201 / 24%));
+    filter: none;
     transform: translateY(-2px);
 }
 
