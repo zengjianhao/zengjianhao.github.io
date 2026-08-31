@@ -669,54 +669,19 @@
 }
 :root {
   color-scheme: light;
-  --bay-bg: #f6fafc;
   --bay-ink: #17324d;
   --bay-cyan: #36b7c9;
   --bay-cobalt: #5d7cff;
   --bay-peach: #ffb38a;
 }
 html {
-  background: var(--bay-bg);
+  background: #fff;
 }
 body {
-  position: relative;
   min-height: 100vh;
   overflow-x: hidden;
   color: var(--color-rurikon-400);
-  background: radial-gradient(circle at 84% 16%, rgb(93 124 255 / 13%), transparent 28rem), radial-gradient(circle at 73% 76%, rgb(54 183 201 / 9%), transparent 30rem), linear-gradient(145deg, #fbfdfe 0%, var(--bay-bg) 58%, #f5f8ff 100%);
-  isolation: isolate;
-}
-body::before, body::after {
-  position: fixed;
-  z-index: -1;
-  pointer-events: none;
-  content: "";
-}
-body::before {
-  top: -12rem;
-  right: -6rem;
-  width: 44rem;
-  height: 38rem;
-  border-radius: 44% 56% 63% 37%;
-  opacity: 0.34;
-  background: conic-gradient( from 130deg, rgb(54 183 201 / 76%), rgb(93 124 255 / 66%), rgb(255 179 138 / 62%), rgb(54 183 201 / 76%) );
-  filter: blur(82px);
-  animation: bay-watercolor-drift 18s ease-in-out infinite alternate;
-}
-body::after {
-  right: 8vw;
-  bottom: 7vh;
-  width: 24rem;
-  height: 10rem;
-  border-radius: 48% 52% 58% 42%;
-  opacity: 0.2;
-  background: linear-gradient(90deg, var(--bay-cyan), var(--bay-peach));
-  filter: blur(62px);
-  animation: bay-watercolor-drift-soft 14s ease-in-out infinite alternate;
-}
-body > .flex {
-  position: relative;
-  z-index: 1;
+  background: #fff;
 }
 nav a {
   border-radius: 0.35rem;
@@ -844,22 +809,6 @@ article a:hover img {
   filter: saturate(1.08) brightness(1.04);
   transform: scale(1.025);
 }
-@keyframes bay-watercolor-drift {
-  from {
-    transform: translate3d(0, 0, 0) rotate(-6deg) scale(1);
-  }
-  to {
-    transform: translate3d(-4rem, 3rem, 0) rotate(7deg) scale(1.12);
-  }
-}
-@keyframes bay-watercolor-drift-soft {
-  from {
-    transform: translate3d(0, 0, 0) scale(0.95);
-  }
-  to {
-    transform: translate3d(-4rem, -1rem, 0) scale(1.1);
-  }
-}
 @keyframes bay-divider-breathe {
   0%, 100% {
     opacity: 0.58;
@@ -879,15 +828,6 @@ article a:hover img {
   nav a:not([aria-current="page"]):hover {
     background: transparent;
     transform: none;
-  }
-  body::before {
-    top: -6rem;
-    right: -13rem;
-    opacity: 0.34;
-  }
-  body::after {
-    right: -8rem;
-    bottom: 8rem;
   }
   main > div:first-child {
     background: linear-gradient(90deg, var(--bay-cyan), var(--bay-cobalt) 58%, var(--bay-peach));
