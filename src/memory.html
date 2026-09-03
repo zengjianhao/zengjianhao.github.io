@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -13,202 +13,47 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
-    <title>Jianhao Zeng</title>
+    <meta name="description" content="A chronological collection of photographs by Jianhao Zeng.">
+    <link href="./output.css?v=20260903-7" rel="stylesheet">
+    <title>Memory — Jianhao Zeng</title>
     <link rel="shortcut icon" href="./public/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-    <style>
-        body.memory-lightbox-open {
-            overflow: hidden;
-        }
-
-        .memory-image-card {
-            display: block;
-            width: 100%;
-            cursor: zoom-in;
-        }
-
-        .memory-lightbox {
-            position: fixed;
-            inset: 0;
-            z-index: 50;
-            display: grid;
-            place-items: center;
-            padding: clamp(1rem, 4vw, 3rem);
-            background: rgb(23 50 77 / 82%);
-            backdrop-filter: blur(12px);
-        }
-
-        .memory-lightbox[hidden] {
-            display: none;
-        }
-
-        .memory-lightbox__image {
-            width: auto;
-            height: auto;
-            max-width: min(92vw, 1200px);
-            max-height: 86vh;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 24px 70px rgb(10 31 51 / 32%), 0 0 36px rgb(54 183 201 / 16%);
-        }
-
-        .memory-lightbox__button {
-            position: absolute;
-            display: grid;
-            place-items: center;
-            width: 2.75rem;
-            height: 2.75rem;
-            padding: 0;
-            color: var(--color-rurikon-800);
-            border: 1px solid rgb(255 255 255 / 60%);
-            border-radius: 9999px;
-            background: rgb(255 255 255 / 82%);
-            box-shadow: 0 10px 30px rgb(10 31 51 / 22%), 0 0 18px rgb(54 183 201 / 10%);
-            backdrop-filter: blur(10px);
-            cursor: pointer;
-            transition: background 150ms ease, transform 150ms ease;
-        }
-
-        .memory-lightbox__button:hover,
-        .memory-lightbox__button:focus-visible {
-            background: rgb(255 255 255 / 96%);
-        }
-
-        .memory-lightbox__button:focus-visible {
-            outline: 2px solid rgb(54 183 201 / 90%);
-            outline-offset: 3px;
-        }
-
-        .memory-lightbox__icon {
-            display: block;
-            width: 1.35rem;
-            height: 1.35rem;
-            fill: none;
-            stroke: currentColor;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 2;
-        }
-
-        .memory-lightbox__button--previous .memory-lightbox__icon,
-        .memory-lightbox__button--next .memory-lightbox__icon {
-            width: 1.6rem;
-            height: 1.6rem;
-        }
-
-        .memory-lightbox__button--close {
-            top: clamp(1rem, 3vw, 2rem);
-            right: clamp(1rem, 3vw, 2rem);
-        }
-
-        .memory-lightbox__button--previous,
-        .memory-lightbox__button--next {
-            top: 50%;
-        }
-
-        .memory-lightbox__button--previous {
-            left: clamp(1rem, 3vw, 2rem);
-            transform: translateY(-50%);
-        }
-
-        .memory-lightbox__button--next {
-            right: clamp(1rem, 3vw, 2rem);
-            transform: translateY(-50%);
-        }
-
-        .memory-lightbox__button--previous:hover,
-        .memory-lightbox__button--previous:focus-visible,
-        .memory-lightbox__button--next:hover,
-        .memory-lightbox__button--next:focus-visible {
-            transform: translateY(-50%) scale(1.04);
-        }
-
-        @media (max-width: 520px) {
-            .memory-lightbox {
-                padding: 4rem 0.75rem;
-            }
-
-            .memory-lightbox__image {
-                max-width: 100%;
-                max-height: 82vh;
-            }
-
-            .memory-lightbox__button {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-        }
-    </style>
 </head>
 
-
-<body class="
-    w-full
-    p-6 sm:p-10 md:p-14
-    text-[14px] sm:text-[15px] md:text-[16px]
-    leading-6 sm:leading-7 md:leading-7
-    antialiased
-">
-    <div class="flex flex-col mobile:flex-row">
-        <nav class="
-            w-full mobile:w-24
-            mr-0 mobile:mr-6 sm:mr-10 md:mr-14
-        ">
-            <ul class="
-                mobile:sticky top-6 sm:top-10 md:top-14
-                mb-6 mobile:mb-0
-                flex flex-row justify-start items-end gap-2 mobile:flex-col
-                font-lora italic
-            ">
-                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
-                    <a class="inline-block w-full px-4" draggable="false" href="./index.html">About</a>
-                </li>
-                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
-                    <a class="inline-block w-full px-4" draggable="false" href="./experience.html">Experience</a>
-                </li>
-                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
-                    <a class="inline-block w-full px-4" draggable="false" href="./publications.html">Publications</a>
-                </li>
-                <li class="text-rurikon-800 -mx-4">
-                    <a class="inline-block w-full px-4" draggable="false" aria-current="page" href="./memory.html">Memory</a>
-                </li>
-                <li class="text-rurikon-400 hover:text-rurikon-800 transition-colors -mx-4">
-                    <a class="inline-block w-full px-4" draggable="false" href="./travel.html">Travel</a>
-                </li>
-            </ul>
-        </nav>
-
-
-        <main class="relative flex-1 max-w-2xl">
-            <div class="
-                absolute
-                w-full h-px mobile:h-full mobile:w-px
-                opacity-50 mobile:opacity-100
-                bg-rurikon-border mix-blend-multiply
-                top-0 left-0
-            ">
+<body class="memory-page">
+    <div id="memory-page-content" class="memory-shell">
+        <header class="memory-header">
+            <div class="memory-header__identity">
+                <a class="memory-home" href="./index.html" aria-label="Back to Jianhao Zeng's home page">
+                    <span class="memory-home__mark" aria-hidden="true">&lt;</span>
+                    <span>Jianhao Zeng</span>
+                </a>
+                <h1 class="memory-sr-only">Memory</h1>
             </div>
-            <article id="memory-gallery" class="
-                font-merriweather
-                pl-0 mobile:pl-6 sm:pl-10 md:pl-14
-                pt-6 mobile:pt-0
-            "></article>
+
+            <button id="memory-view-toggle" class="memory-view-toggle" type="button" aria-pressed="true"
+                aria-label="Show full composition" title="Show full composition">
+                <svg class="memory-view-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="1.5"></rect>
+                    <path d="M12 3.5v17M3.5 12h17"></path>
+                </svg>
+            </button>
+        </header>
+
+        <main>
+            <article id="memory-gallery" class="memory-gallery" data-view="crop"
+                aria-label="Photo memories by year"></article>
         </main>
     </div>
 
-    <div id="memory-lightbox" class="memory-lightbox" role="dialog" aria-modal="true" hidden>
-        <button id="memory-lightbox-close" class="memory-lightbox__button memory-lightbox__button--close" type="button"
-            aria-label="Close preview" title="Close preview">
+    <div id="memory-lightbox" class="memory-lightbox" role="dialog" aria-modal="true"
+        aria-label="Image preview" aria-describedby="memory-lightbox-status" hidden>
+        <button id="memory-lightbox-close" class="memory-lightbox__button memory-lightbox__button--close"
+            type="button" aria-label="Close preview" title="Close preview">
             <svg class="memory-lightbox__icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18 6 6 18"></path>
                 <path d="M6 6 18 18"></path>
@@ -221,51 +66,52 @@
             </svg>
         </button>
         <img id="memory-lightbox-image" class="memory-lightbox__image" alt="">
-        <button id="memory-lightbox-next" class="memory-lightbox__button memory-lightbox__button--next" type="button"
-            aria-label="Next image" title="Next image">
+        <button id="memory-lightbox-next" class="memory-lightbox__button memory-lightbox__button--next"
+            type="button" aria-label="Next image" title="Next image">
             <svg class="memory-lightbox__icon" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="m9 18 6-6-6-6"></path>
             </svg>
         </button>
+        <p id="memory-lightbox-status" class="memory-sr-only" aria-live="polite"></p>
     </div>
 
     <script src="./memory-images.js"></script>
     <script>
-        const mobileMediaQuery = window.matchMedia("(min-width: 420px)");
-        const cardClasses = "overflow-hidden rounded-lg shadow-sm aspect-[4/3] bg-gray-100";
-        const columnClasses = "flex flex-col gap-4";
-        const imageClasses = "w-full h-full object-cover";
+        const THUMBNAIL_TRANSFORM = "c_limit,w_1200,h_1200";
+        const EAGER_IMAGE_COUNT = 4;
+        const gallery = document.getElementById("memory-gallery");
+        const viewToggle = document.getElementById("memory-view-toggle");
+        const pageContent = document.getElementById("memory-page-content");
         const lightbox = document.getElementById("memory-lightbox");
         const lightboxImage = document.getElementById("memory-lightbox-image");
+        const lightboxStatus = document.getElementById("memory-lightbox-status");
         const lightboxCloseButton = document.getElementById("memory-lightbox-close");
         const lightboxPreviousButton = document.getElementById("memory-lightbox-previous");
         const lightboxNextButton = document.getElementById("memory-lightbox-next");
-        let currentColumnCount = 0;
         let activeImageIndex = 0;
         let activeImageTrigger = null;
+        let cropViewIsActive = true;
 
-        const isAbsoluteUrl = (value) => {
-            return /^https?:\/\//i.test(value);
-        };
+        const isAbsoluteUrl = (value) => /^https?:\/\//i.test(value);
 
-        const getImageUrl = (baseUrl, image) => {
+        const getImageUrl = (baseUrl, image, transform = "") => {
             if (isAbsoluteUrl(image)) {
                 return image;
             }
 
-            const separator = baseUrl.endsWith("/") ? "" : "/";
-            return `${baseUrl}${separator}${image}`;
+            const normalizedBaseUrl = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
+            const transformation = transform ? `${transform}/` : "";
+            return `${normalizedBaseUrl}${transformation}${image}`;
         };
 
         const memoryImageGroups = window.memoryImageConfig.groups.map((group) => {
             return {
                 year: group.year,
-                images: group.images.map((image) => {
-                    return {
-                        alt: `${group.year} memory`,
-                        src: getImageUrl(window.memoryImageConfig.baseUrl, image),
-                    };
-                }),
+                images: group.images.map((image, groupIndex) => ({
+                    alt: `Photo ${groupIndex + 1} from ${group.year}`,
+                    src: getImageUrl(window.memoryImageConfig.baseUrl, image),
+                    thumbnailSrc: getImageUrl(window.memoryImageConfig.baseUrl, image, THUMBNAIL_TRANSFORM),
+                })),
             };
         });
 
@@ -274,15 +120,12 @@
             image.index = index;
         });
 
-        const revealImage = (img) => {
-            const container = img.parentElement;
-            if (!container) {
-                return;
-            }
-
-            container.classList.remove("aspect-[4/3]", "bg-gray-100");
-            img.classList.remove("h-full");
-            img.classList.add("h-auto");
+        const preloadAdjacentImages = () => {
+            [-1, 1].forEach((offset) => {
+                const index = (activeImageIndex + offset + memoryImages.length) % memoryImages.length;
+                const preloadImage = new Image();
+                preloadImage.src = memoryImages[index].src;
+            });
         };
 
         const showLightboxImage = (index) => {
@@ -291,12 +134,15 @@
 
             lightboxImage.src = image.src;
             lightboxImage.alt = image.alt;
+            lightboxStatus.textContent = `${image.alt}. Image ${activeImageIndex + 1} of ${memoryImages.length}.`;
+            preloadAdjacentImages();
         };
 
         const openLightbox = (index, trigger) => {
             activeImageTrigger = trigger;
             showLightboxImage(index);
             lightbox.hidden = false;
+            pageContent.inert = true;
             document.body.classList.add("memory-lightbox-open");
             lightboxCloseButton.focus();
         };
@@ -304,6 +150,8 @@
         const closeLightbox = () => {
             lightbox.hidden = true;
             lightboxImage.removeAttribute("src");
+            lightboxStatus.textContent = "";
+            pageContent.inert = false;
             document.body.classList.remove("memory-lightbox-open");
 
             if (activeImageTrigger && document.contains(activeImageTrigger)) {
@@ -316,77 +164,97 @@
         };
 
         const createImageCard = (image) => {
-            const container = document.createElement("button");
-            container.type = "button";
-            container.className = `${cardClasses} memory-image-card`;
-            container.setAttribute("aria-label", `Open ${image.alt}`);
-            container.addEventListener("click", () => openLightbox(image.index, container));
+            const card = document.createElement("button");
+            card.type = "button";
+            card.className = "memory-image-card";
+            card.setAttribute("aria-label", `Open ${image.alt.toLowerCase()}`);
+            card.addEventListener("click", () => openLightbox(image.index, card));
 
             const img = document.createElement("img");
-            img.className = imageClasses;
+            img.className = "memory-image-card__image";
             img.alt = image.alt;
-            img.loading = "lazy";
             img.decoding = "async";
-            img.addEventListener("load", () => revealImage(img), { once: true });
-            img.src = image.src;
-            container.append(img);
-
-            if (img.complete && img.naturalWidth > 0) {
-                revealImage(img);
+            img.loading = image.index < EAGER_IMAGE_COUNT ? "eager" : "lazy";
+            if (image.index < EAGER_IMAGE_COUNT) {
+                img.fetchPriority = "high";
             }
 
-            return container;
-        };
+            const markImageAsLoaded = () => card.classList.add("is-loaded");
+            img.addEventListener("load", markImageAsLoaded, { once: true });
+            img.addEventListener("error", () => card.classList.add("is-error"), { once: true });
+            img.src = image.thumbnailSrc;
 
-        const getColumnCount = () => {
-            return mobileMediaQuery.matches ? 2 : 1;
-        };
+            const fallback = document.createElement("span");
+            fallback.className = "memory-image-card__fallback";
+            fallback.setAttribute("aria-hidden", "true");
+            fallback.textContent = "Image unavailable";
 
-        const createMasonryList = (group, columnCount) => {
-            const list = document.createElement("div");
-            list.className = "mt-7";
-            list.style.display = "grid";
-            list.style.gridTemplateColumns = `repeat(${columnCount}, minmax(0, 1fr))`;
-            list.style.gap = "1rem";
+            card.append(img, fallback);
 
-            const columns = Array.from({ length: columnCount }, () => {
-                const column = document.createElement("div");
-                column.className = columnClasses;
-                list.append(column);
-                return column;
-            });
+            if (img.complete && img.naturalWidth > 0) {
+                markImageAsLoaded();
+            }
 
-            group.images.forEach((image, index) => {
-                columns[index % columnCount].append(createImageCard(image, group));
-            });
-
-            return list;
+            return card;
         };
 
         const renderMemoryGallery = () => {
-            const gallery = document.getElementById("memory-gallery");
-            const columnCount = getColumnCount();
-            currentColumnCount = columnCount;
-            gallery.replaceChildren();
+            const fragment = document.createDocumentFragment();
 
-            memoryImageGroups.forEach((group, groupIndex) => {
-                const heading = document.createElement("h1");
-                heading.className = `${groupIndex === 0 ? "" : "mt-7 "}font-semibold text-rurikon-800`;
+            memoryImageGroups.forEach((group) => {
+                const section = document.createElement("section");
+                section.className = "memory-year";
+                section.setAttribute("aria-labelledby", `memory-year-${group.year}`);
+
+                const heading = document.createElement("h2");
+                heading.id = `memory-year-${group.year}`;
+                heading.className = "memory-year__heading";
                 heading.textContent = group.year;
-                gallery.append(heading);
 
-                gallery.append(createMasonryList(group, columnCount));
+                const grid = document.createElement("div");
+                grid.className = "memory-grid";
+                group.images.forEach((image) => grid.append(createImageCard(image)));
+
+                section.append(heading, grid);
+                fragment.append(section);
             });
+
+            gallery.replaceChildren(fragment);
         };
 
-        const handleMasonryBreakpointChange = () => {
-            if (getColumnCount() !== currentColumnCount) {
-                renderMemoryGallery();
+        const updateViewToggle = () => {
+            const label = cropViewIsActive ? "Show full composition" : "Switch to square crop";
+            gallery.dataset.view = cropViewIsActive ? "crop" : "contain";
+            viewToggle.setAttribute("aria-pressed", String(cropViewIsActive));
+            viewToggle.setAttribute("aria-label", label);
+            viewToggle.title = label;
+        };
+
+        const trapLightboxFocus = (event) => {
+            const focusableElements = [
+                lightboxCloseButton,
+                lightboxPreviousButton,
+                lightboxNextButton,
+            ].filter((element) => !element.hidden && !element.disabled);
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            if (event.shiftKey && document.activeElement === firstElement) {
+                event.preventDefault();
+                lastElement.focus();
+            } else if (!event.shiftKey && document.activeElement === lastElement) {
+                event.preventDefault();
+                firstElement.focus();
             }
         };
 
         renderMemoryGallery();
+        updateViewToggle();
 
+        viewToggle.addEventListener("click", () => {
+            cropViewIsActive = !cropViewIsActive;
+            updateViewToggle();
+        });
         lightboxCloseButton.addEventListener("click", closeLightbox);
         lightboxPreviousButton.addEventListener("click", () => moveLightbox(-1));
         lightboxNextButton.addEventListener("click", () => moveLightbox(1));
@@ -401,27 +269,23 @@
                 return;
             }
 
+            if (event.key === "Tab") {
+                trapLightboxFocus(event);
+                return;
+            }
+
             if (event.key === "Escape") {
+                event.preventDefault();
                 closeLightbox();
-            }
-
-            if (event.key === "ArrowLeft") {
+            } else if (event.key === "ArrowLeft") {
+                event.preventDefault();
                 moveLightbox(-1);
-            }
-
-            if (event.key === "ArrowRight") {
+            } else if (event.key === "ArrowRight") {
+                event.preventDefault();
                 moveLightbox(1);
             }
         });
-
-        if (mobileMediaQuery.addEventListener) {
-            mobileMediaQuery.addEventListener("change", handleMasonryBreakpointChange);
-        } else {
-            mobileMediaQuery.addListener(handleMasonryBreakpointChange);
-        }
     </script>
-
 </body>
-
 
 </html>
