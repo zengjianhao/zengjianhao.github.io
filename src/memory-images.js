@@ -4,8 +4,14 @@ window.memoryImageConfig = {
         {
             year: "2026",
             images: [
+                "ofyxt2lnfxpplohgwggx",
                 "lbpwtyboeke1dpuwlav3",
+                "soh7txqrc2hfmgeqsflq",
                 "gd5dxiuagpempfw6hsua",
+                "syucjrrg2fzennagbtqv",
+                "akzeuickb8lz38uzkxcn",
+                "lm0ts0ykch5kxynfql8o",
+                "kayt2xslt3fxh53pykcv",
                 "sbwi81okgr67fg6dzpmq",
                 "z7dxbu5ypujd5o6cdd1y",
                 "wrgal5effwydik3gtnlt",
