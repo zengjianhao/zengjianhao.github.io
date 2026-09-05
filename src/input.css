@@ -404,15 +404,64 @@ article a:hover img {
     display: none;
 }
 
+.memory-page .memory-lightbox__stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    max-width: min(88vw, 1600px);
+    max-height: 88vh;
+}
+
 .memory-page .memory-lightbox__image {
     display: block;
     width: auto;
     height: auto;
-    max-width: min(88vw, 1600px);
+    max-width: 100%;
     max-height: 88vh;
     object-fit: contain;
     border-radius: 0.25rem;
     box-shadow: 0 28px 80px rgb(0 8 18 / 32%);
+}
+
+.memory-page .memory-lightbox__stage:has(.memory-lightbox__location:not([hidden])) .memory-lightbox__image {
+    max-height: calc(88vh - 2.85rem);
+}
+
+.memory-page .memory-lightbox__location {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin: 0.8rem 0 0;
+    max-width: 100%;
+    color: rgb(255 255 255 / 84%);
+    font-family: var(--font-lora);
+    font-size: clamp(0.84rem, 1.5vw, 0.98rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 0.02em;
+}
+
+.memory-page .memory-lightbox__location[hidden] {
+    display: none;
+}
+
+.memory-page .memory-lightbox__location-icon {
+    width: 0.92rem;
+    height: 0.92rem;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+    transform: translateY(-0.04em);
+}
+
+.memory-page .memory-lightbox__location-text {
+    min-width: 0;
 }
 
 .memory-page .memory-lightbox__button {
@@ -506,9 +555,17 @@ article a:hover img {
         padding: 4.75rem 1rem 5.75rem;
     }
 
+    .memory-page .memory-lightbox__stage {
+        max-height: calc(100vh - 10.5rem);
+    }
+
     .memory-page .memory-lightbox__image {
         max-width: 100%;
         max-height: calc(100vh - 10.5rem);
+    }
+
+    .memory-page .memory-lightbox__stage:has(.memory-lightbox__location:not([hidden])) .memory-lightbox__image {
+        max-height: calc(100vh - 13.25rem);
     }
 
     .memory-page .memory-lightbox__button--previous,

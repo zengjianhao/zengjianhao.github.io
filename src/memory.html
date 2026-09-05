@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A chronological collection of photographs by Jianhao Zeng.">
-    <link href="./output.css?v=20260903-8" rel="stylesheet">
+    <link href="./output.css?v=20260906-1" rel="stylesheet">
     <title>Memory — Jianhao Zeng</title>
     <link rel="shortcut icon" href="./public/avatar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +65,16 @@
                 <path d="m15 18-6-6 6-6"></path>
             </svg>
         </button>
-        <img id="memory-lightbox-image" class="memory-lightbox__image" alt="">
+        <figure class="memory-lightbox__stage">
+            <img id="memory-lightbox-image" class="memory-lightbox__image" alt="">
+            <figcaption id="memory-lightbox-location" class="memory-lightbox__location" hidden>
+                <svg class="memory-lightbox__location-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span id="memory-lightbox-location-text" class="memory-lightbox__location-text"></span>
+            </figcaption>
+        </figure>
         <button id="memory-lightbox-next" class="memory-lightbox__button memory-lightbox__button--next"
             type="button" aria-label="Next image" title="Next image">
             <svg class="memory-lightbox__icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -84,6 +93,8 @@
         const pageContent = document.getElementById("memory-page-content");
         const lightbox = document.getElementById("memory-lightbox");
         const lightboxImage = document.getElementById("memory-lightbox-image");
+        const lightboxLocation = document.getElementById("memory-lightbox-location");
+        const lightboxLocationText = document.getElementById("memory-lightbox-location-text");
         const lightboxStatus = document.getElementById("memory-lightbox-status");
         const lightboxCloseButton = document.getElementById("memory-lightbox-close");
         const lightboxPreviousButton = document.getElementById("memory-lightbox-previous");
@@ -104,14 +115,30 @@
             return `${normalizedBaseUrl}${transformation}${image}`;
         };
 
+        const normalizeImageEntry = (image) => {
+            if (typeof image === "string") {
+                return { src: image, location: "" };
+            }
+
+            return {
+                src: image.src,
+                location: typeof image.location === "string" ? image.location.trim() : "",
+            };
+        };
+
         const memoryImageGroups = window.memoryImageConfig.groups.map((group) => {
             return {
                 year: group.year,
-                images: group.images.map((image, groupIndex) => ({
-                    alt: `Photo ${groupIndex + 1} from ${group.year}`,
-                    src: getImageUrl(window.memoryImageConfig.baseUrl, image),
-                    thumbnailSrc: getImageUrl(window.memoryImageConfig.baseUrl, image, THUMBNAIL_TRANSFORM),
-                })),
+                images: group.images.map((image, groupIndex) => {
+                    const entry = normalizeImageEntry(image);
+
+                    return {
+                        alt: `Photo ${groupIndex + 1} from ${group.year}`,
+                        src: getImageUrl(window.memoryImageConfig.baseUrl, entry.src),
+                        thumbnailSrc: getImageUrl(window.memoryImageConfig.baseUrl, entry.src, THUMBNAIL_TRANSFORM),
+                        location: entry.location,
+                    };
+                }),
             };
         });
 
@@ -128,13 +155,30 @@
             });
         };
 
+        const updateLightboxLocation = (image) => {
+            const statusPrefix = image.location ? `${image.alt}. ${image.location}.` : `${image.alt}.`;
+
+            lightboxStatus.textContent = `${statusPrefix} Image ${activeImageIndex + 1} of ${memoryImages.length}.`;
+
+            if (!image.location) {
+                lightboxLocation.hidden = true;
+                lightboxLocationText.textContent = "";
+                lightbox.setAttribute("aria-label", "Image preview");
+                return;
+            }
+
+            lightboxLocationText.textContent = image.location;
+            lightboxLocation.hidden = false;
+            lightbox.setAttribute("aria-label", `Image preview, ${image.location}`);
+        };
+
         const showLightboxImage = (index) => {
             activeImageIndex = (index + memoryImages.length) % memoryImages.length;
             const image = memoryImages[activeImageIndex];
 
             lightboxImage.src = image.src;
             lightboxImage.alt = image.alt;
-            lightboxStatus.textContent = `${image.alt}. Image ${activeImageIndex + 1} of ${memoryImages.length}.`;
+            updateLightboxLocation(image);
             preloadAdjacentImages();
         };
 
@@ -150,6 +194,9 @@
         const closeLightbox = () => {
             lightbox.hidden = true;
             lightboxImage.removeAttribute("src");
+            lightboxLocation.hidden = true;
+            lightboxLocationText.textContent = "";
+            lightbox.setAttribute("aria-label", "Image preview");
             lightboxStatus.textContent = "";
             pageContent.inert = false;
             document.body.classList.remove("memory-lightbox-open");
@@ -167,7 +214,9 @@
             const card = document.createElement("button");
             card.type = "button";
             card.className = "memory-image-card";
-            card.setAttribute("aria-label", `Open ${image.alt.toLowerCase()}`);
+            card.setAttribute("aria-label", image.location
+                ? `Open ${image.alt.toLowerCase()}, ${image.location}`
+                : `Open ${image.alt.toLowerCase()}`);
             card.addEventListener("click", () => openLightbox(image.index, card));
 
             const img = document.createElement("img");
