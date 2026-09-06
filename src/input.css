@@ -355,7 +355,7 @@ article a:hover img {
     height: 100%;
     opacity: 0;
     object-fit: contain;
-    object-position: center top;
+    object-position: center;
     transition: opacity 260ms ease;
 }
 
@@ -365,7 +365,6 @@ article a:hover img {
 
 .memory-page .memory-gallery[data-view="crop"] .memory-image-card__image {
     object-fit: cover;
-    object-position: center;
 }
 
 .memory-page .memory-image-card__fallback {
