@@ -1,5 +1,3 @@
-// Fill each photo's `location` here. Example: { src: "ofyxt2lnfxpplohgwggx", location: "Hangzhou, China" }
-// Leave `location` empty to hide the caption under the enlarged image.
 window.memoryImageConfig = {
     baseUrl: "https://res.cloudinary.com/dhjewthzp/image/upload/q_auto/f_auto/",
     groups: [
@@ -52,13 +50,13 @@ window.memoryImageConfig = {
                 { src: "v1777474180/rg9drsabwrmio9l8apu1.jpg", location: "奈良公园，奈良" },
                 { src: "v1777474177/fivibll5nz4nqccdimn5.jpg", location: "若草山，奈良" },
                 { src: "v1777474178/da9glesly4d04xftwocj.jpg", location: "清水寺，京都" },
-                { src: "v1777474160/ykjio5xfvjrnpw6v57ro.jpg", location: "东淀川站，大版" },
-                { src: "v1777474170/zzsbzx3rllm99o50hwqa.jpg", location: "大阪城，大版" },
+                { src: "v1777474160/ykjio5xfvjrnpw6v57ro.jpg", location: "东淀川站，大阪" },
+                { src: "v1777474170/zzsbzx3rllm99o50hwqa.jpg", location: "大阪城，大阪" },
                 { src: "v1777474156/mecotizjohruturqv4eu.jpg", location: "平等院，宇治" },
-                { src: "v1777474119/snosuyqb4hlisdyspeme.jpg", location: "大阪站，大版" },
+                { src: "v1777474119/snosuyqb4hlisdyspeme.jpg", location: "大阪站，大阪" },
                 { src: "v1777474158/bro8t9pc9wcra3wwpkwm.jpg", location: "生田神社，神户" },
                 { src: "v1777474152/nrtrlj0lzktidfohklcv.jpg", location: "美利坚公园，神户" },
-                { src: "v1777474158/ighhmkcwlokw9uc17xan.jpg", location: "关西国际机场，大版" },
+                { src: "v1777474158/ighhmkcwlokw9uc17xan.jpg", location: "关西国际机场，大阪" },
                 { src: "v1777474365/hnzxf5tf2zjlv8jffodn.jpg", location: "千岛湖，杭州" },
                 { src: "v1777474121/n5auzpkpfntu1rpmgter.jpg", location: "杭州动物园，杭州" },
                 { src: "v1777474096/dhcakd4y5lieoqjxfudh.jpg", location: "杭州动物园，杭州" },
@@ -74,9 +72,9 @@ window.memoryImageConfig = {
             year: "2024",
             images: [
                 { src: "v1777471965/hdc1z8eqoxyheprrch9f.jpg", location: "华侨城世界之窗，深圳" },
-                { src: "v1777471968/vszeirtryk2pohy4qj6c.jpg", location: "未知村落，杭州" },
-                { src: "v1777471964/enka6fuhxgbudjz2vkp0.jpg", location: "未知村落，杭州" },
-                { src: "v1777471957/rhdcc5txzsvncphvc8be.jpg", location: "未知村落，杭州" },
+                { src: "v1777471968/vszeirtryk2pohy4qj6c.jpg", location: "良渚、余杭交界，杭州" },
+                { src: "v1777471964/enka6fuhxgbudjz2vkp0.jpg", location: "良渚、余杭交界，杭州" },
+                { src: "v1777471957/rhdcc5txzsvncphvc8be.jpg", location: "良渚、余杭交界，杭州" },
                 { src: "v1777471955/ybw8vshdojuoopqmafyn.jpg", location: "西湖大学云谷校区，杭州" },
                 { src: "v1777471953/mjxmokfidmltpkrch70m.jpg", location: "西湖，杭州" },
                 { src: "v1777471953/clxn7aorunlgjowpjlew.jpg", location: "西湖大学云谷校区，杭州" },
