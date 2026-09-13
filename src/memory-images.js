@@ -4,9 +4,10 @@ window.memoryImageConfig = {
         {
             year: "2026",
             images: [
-                { src: "ofyxt2lnfxpplohgwggx", location: "玉龙雪山蓝月谷，丽江" },
+                { src: "fsp2mgihwe4eztb2s1rm", location: "玉龙雪山蓝月谷，丽江" },
                 { src: "lbpwtyboeke1dpuwlav3", location: "苍山玉带云游路，大理" },
                 { src: "soh7txqrc2hfmgeqsflq", location: "洱海，大理" },
+                { src: "qrj181okht5xmtcmjrpt", location: "洱海，大理" },
                 { src: "gd5dxiuagpempfw6hsua", location: "龙龛，大理" },
                 { src: "syucjrrg2fzennagbtqv", location: "滇池海埂大坝，昆明" },
                 { src: "akzeuickb8lz38uzkxcn", location: "静安嘉里中心，上海" },
