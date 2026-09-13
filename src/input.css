@@ -224,8 +224,7 @@ article a:hover img {
 }
 
 .memory-page .memory-shell {
-    width: min(100%, 1600px);
-    margin: 0 auto;
+    width: 100%;
     padding: clamp(1.5rem, 3vw, 3.5rem);
 }
 
