@@ -31,7 +31,6 @@ window.memoryImageConfig = {
             images: [
                 { src: "v1777474374/fqa3dpcg90dlu9eyoqyh.jpg", location: "蓝星花园，北京" },
                 { src: "v1777474355/alprscrhqdxubvy3dhxe.jpg", location: "颐和园，北京" },
-                { src: "v1777474384/w0tlfywyozqddqpbcfl5.jpg", location: "武清，天津" },
                 { src: "v1777474357/hdixlgw5xrpjeuhcebur.jpg", location: "武清，天津" },
                 { src: "v1777474353/bysvyj8zyk6xnpt5pzgz.jpg", location: "蓝星花园，北京" },
                 { src: "v1777474366/ni9om0y4bgh2kjtvrpa0.jpg", location: "地坛公园，北京" },
